@@ -48,6 +48,4 @@ sudo systemctl enable startup.service
 sudo systemctl enable pwr_perf.service
 
 #set shell to zsh
-echo 'changing shell to zsh'
-sleep 0.1
-chsh -s /usr/bin/zsh
+echo 'change shell to zsh with chsh -s /usr/bin/zsh'
