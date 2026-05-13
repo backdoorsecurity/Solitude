@@ -29,6 +29,7 @@ echo 'set up passwordless commands'
 sleep 0.1
 echo " "$USER" ALL=(ALL) NOPASSWD: ALL" > /tmp/usermods
 sudo mv /tmp/usermods /etc/sudoers.d/
+chown root:root /etc/sudoers.d/usermods
 
 # autologin $USER
 echo 'setting up autologin'
@@ -50,4 +51,3 @@ sudo systemctl enable pwr_perf.service
 echo 'changing shell to zsh'
 sleep 0.1
 chsh -s /usr/bin/zsh
-su -c 'chsh -s /usr/bin/zsh root'
