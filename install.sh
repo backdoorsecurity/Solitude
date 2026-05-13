@@ -50,4 +50,4 @@ sudo systemctl enable pwr_perf.service
 echo 'changing shell to zsh'
 sleep 0.1
 chsh -s /usr/bin/zsh
-sudo chsh -s /usr/bin/zsh
+su -c 'chsh -s /usr/bin/zsh root'
