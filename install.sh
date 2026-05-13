@@ -49,4 +49,4 @@ sudo systemctl enable pwr_perf.service
 #set shell to zsh
 echo 'changing shell to zsh'
 sleep 0.1
-chsh -s /usr/bin/zsh $USER
+chsh -s /usr/bin/zsh "$USER"
