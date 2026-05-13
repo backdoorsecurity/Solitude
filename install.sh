@@ -5,7 +5,8 @@ USER=$USER
 # install packages:
 echo 'installing packages'
 sleep 0.1
-sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y && sudo apt install -y git wget curl sway waybar wtype bridge-utils foot iptables iptables-persistent wget zsh zsh-autosuggestions zsh-syntax-highlighting copyq wf-recorder
+sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y
+sudo apt install -y virt-manager git wget curl sway waybar wtype bridge-utils foot wget zsh zsh-autosuggestions zsh-syntax-highlighting copyq wf-recorder
 
 # setup config dir
 echo 'creating config dir'
