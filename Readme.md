@@ -10,4 +10,4 @@ The system emphasizes a minimal browser and net vm, allowing users to isolate un
 You can install Solitude with a single command:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/setup_host.sh | bash
+curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/install.sh | bash
