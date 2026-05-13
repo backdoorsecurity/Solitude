@@ -27,16 +27,15 @@ sudo cp host-os/dot-files/.zshrc /root
 # allow $USER passwordless commands
 echo 'set up passwordless commands'
 sleep 0.1
-echo " "$USER" ALL=(ALL) NOPASSWD: ALL" > /tmp/usermods
-sudo mv /tmp/usermods /etc/sudoers.d/
-chown root:root /etc/sudoers.d/usermods
+echo "$USER ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/$USER
+sudo chmod 0440 /etc/sudoers.d/$USER
 
 # autologin $USER
 echo 'setting up autologin'
 sleep 0.1
 sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
 echo -e "[Service]\nExecStart=\nExecStart=-/sbin/agetty --autologin "$USER" --noclear %I 38400 linux" > /tmp/override.conf
-sudo mv /tmp/override.conf /etc/systemd/system/getty@tty1.service.d && systemctl daemon-reload
+sudo mv /tmp/override.conf /etc/systemd/system/getty@tty1.service.d && sudo systemctl daemon-reload
 
 # setup systemd service files
 echo 'installing system service files'
@@ -50,4 +49,4 @@ sudo systemctl enable pwr_perf.service
 #set shell to zsh
 echo 'changing shell to zsh'
 sleep 0.1
-chsh -s /usr/bin/zsh
+chsh -s /usr/bin/zsh $USER
