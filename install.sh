@@ -40,8 +40,9 @@ sudo mv /tmp/override.conf /etc/systemd/system/getty@tty1.service.d && systemctl
 # setup systemd service files
 echo 'installing system service files'
 sleep 0.1
-echo -e "[Unit]\nDescription=Apply system and network profiles\nAfter=sockets.target\n\n[Service]\nType=oneshot\nExecStart=/home/"$USER"/.config/sway/scripts/startup.sh\nRemainAfterExit=no\n\n[Install]\nWantedBy=sockets.target > /etc/systemd/system/startup.service
-echo -e "[Unit]\nDescription=Switch cpu turbo and energy bias based on ac/battery\nAfter=sockets.target\n\n[Service]\nType=simple\nExecStart=/"$USER"/.config/sway/scripts/pwr_perf.sh\nRemainAfterExit=yes\n\n[Install]\nWantedBy=sockets.target" > /etc/systemd/system/pwr_perf.service
+echo -e "[Unit]\nDescription=Apply system and network profiles\nAfter=sockets.target\n\n[Service]\nType=oneshot\nExecStart=/home/"$USER"/.config/sway/scripts/startup.sh\nRemainAfterExit=no\n\n[Install]\nWantedBy=sockets.target" > /tmp/startup.service
+echo -e "[Unit]\nDescription=Switch cpu turbo and energy bias based on ac/battery\nAfter=sockets.target\n\n[Service]\nType=simple\nExecStart=/"$USER"/.config/sway/scripts/pwr_perf.sh\nRemainAfterExit=yes\n\n[Install]\nWantedBy=sockets.target" > /tmp/pwr_perf.service
+sudo cp /tmp/*.service /etc/systemd/system/
 sudo systemctl enable startup.service
 sudo systemctl enable pwr_perf.service
 
