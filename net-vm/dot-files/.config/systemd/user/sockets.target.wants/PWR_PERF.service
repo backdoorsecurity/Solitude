@@ -1,0 +1,11 @@
+[Unit]
+Description=Switch CPU turbo and energy bias based on AC/battery
+After=sockets.target
+
+[Service]
+Type=simple
+ExecStart=/root/.config/bin/scripts/PWR_PERF.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=sockets.target

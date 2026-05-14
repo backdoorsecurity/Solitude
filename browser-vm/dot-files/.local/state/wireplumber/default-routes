@@ -1,0 +1,11 @@
+[default-routes]
+alsa_card.pci-0000_00_1b.0:output:analog-output-lineout={"channelVolumes":[1184247.250000, 1184247.250000], "mute":false, "channelMap":["FL", "FR"], "latencyOffsetNsec":0}
+alsa_card.pci-0000_00_1b.0:profile:output:analog-stereo+input:analog-stereo=["analog-output-lineout"]
+alsa_card.pci-0000_09_01.0:output:analog-output-lineout={"channelVolumes":[2696.553223, 2696.553223], "channelMap":["FL", "FR"], "mute":false, "latencyOffsetNsec":0}
+alsa_card.pci-0000_09_01.0:profile:output:analog-stereo+input:analog-stereo=["analog-output-headphones"]
+alsa_card.pci-0000_09_02.0:output:analog-output={"channelVolumes":[85.116310, 85.116310], "channelMap":["FL", "FR"], "mute":false, "latencyOffsetNsec":0}
+alsa_card.pci-0000_09_02.0:profile:output:analog-stereo+input:analog-stereo=["analog-output"]
+alsa_card.pci-0000_09_01.0:output:analog-output-speaker={"latencyOffsetNsec":0, "channelVolumes":[0.166032, 0.166032], "mute":false, "channelMap":["FL", "FR"]}
+alsa_card.usb-3142_fifine_Headset-00:output:analog-output-headphones={"channelVolumes":[0.042872, 0.042872], "channelMap":["FL", "FR"], "latencyOffsetNsec":0, "mute":false}
+alsa_card.usb-3142_fifine_Headset-00:profile:output:analog-stereo+input:mono-fallback=["analog-output-headphones"]
+alsa_card.pci-0000_09_01.0:output:analog-output-headphones={"latencyOffsetNsec":0, "mute":false, "channelVolumes":[23.134403, 23.134403], "channelMap":["FL", "FR"]}

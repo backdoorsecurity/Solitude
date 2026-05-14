@@ -1,0 +1,1 @@
+su -l SECURITY -c "DISPLAY=:wayland-1 XAUTHORITY=/root/.Xauthority /usr/bin/firejail --profile=/SECURITY/.config/firejail/waypipe/waypipe.profile waypipe ssh browzer@10.10.10.4 env QT_QPA_PLATFORM=wayland-egl falkon"

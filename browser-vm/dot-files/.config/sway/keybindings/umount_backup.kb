@@ -1,0 +1,3 @@
+#!/bin/bash
+umount /mnt/cryptstorage 2>/dev/null
+cryptsetup luksClose cryptstorage 2>/dev/null

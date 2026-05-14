@@ -1,0 +1,3 @@
+#!/bin/bash
+cryptsetup luksOpen /dev/disk/by-uuid/700be73f-abb0-4d20-85bb-3a88891c546d cryptstorage --key-file /root/.keys/cryptstorage.key 2>/dev/null
+mount /dev/mapper/cryptstorage /mnt/cryptstorage 2>/dev/null

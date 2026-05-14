@@ -1,0 +1,11 @@
+[stream-properties]
+Audio/Sink:node.name:auto_null={"channelMap":["FL", "FR"], "volume":1.000000, "channelVolumes":[1.000000, 1.000000], "mute":false}
+Output/Audio:application.name:Falkon={"channelMap":["FL", "FR"], "channelVolumes":[1.000000, 1.000000], "volume":1.000000, "mute":false}
+Output/Audio:media.role:Music={"mute":false, "channelMap":["FL", "FR"], "channelVolumes":[1.000000, 1.000000], "volume":1.000000}
+Input/Audio:application.id:org.PulseAudio.pavucontrol={"channelMap":["MONO"], "volume":1.000000, "mute":false, "channelVolumes":[1.000000]}
+Input/Audio:media.role:Music={"channelVolumes":[1.000000], "volume":1.000000, "mute":false, "channelMap":["MONO"]}
+Output/Audio:application.name:PipeWire\sALSA\s\ospeaker-test\c={"channelVolumes":[1.000000, 1.000000], "mute":false, "channelMap":["FL", "FR"], "volume":1.000000}
+Output/Audio:media.role:Notification={"channelMap":["MONO"], "mute":false, "channelVolumes":[1.000000]}
+Output/Audio:application.name:Firefox={"mute":false, "channelMap":["FL", "FR"], "channelVolumes":[1.000000, 1.000000], "volume":1.000000}
+Input/Audio:application.name:Brave\sinput={"channelVolumes":[1.000000], "mute":false, "channelMap":["MONO"], "volume":1.000000}
+Output/Audio:application.name:Brave={"mute":false, "channelVolumes":[1.000000, 1.000000], "volume":1.000000, "channelMap":["FL", "FR"]}
