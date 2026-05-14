@@ -1,2 +1,0 @@
-#!/bin/bash
-wf-recorder -f full-$(date +%Y%m%d-%H%M%S).mp4

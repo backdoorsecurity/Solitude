@@ -6,7 +6,7 @@ USER=$USER
 echo 'installing packages'
 sleep 0.1
 sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y
-sudo apt install -y linux-headers-$(uname -r) virt-manager git wget curl sway waybar wtype bridge-utils foot wget zsh zsh-autosuggestions zsh-syntax-highlighting copyq wf-recorder oxygencursors
+sudo apt install -y linux-headers-$(uname -r) virt-manager git wget curl sway waybar wtype bridge-utils foot wget zsh zsh-autosuggestions zsh-syntax-highlighting copyq wf-recorder oxygencursors qt6ct
 
 # setup config dir
 echo 'creating config dir'

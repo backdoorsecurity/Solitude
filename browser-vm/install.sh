@@ -6,7 +6,7 @@ USER=$USER
 echo 'installing packages'
 sleep 0.1
 sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y
-sudo apt install -y wget curl sway waybar wtype foot zsh zsh-autosuggestions zsh-syntax-highlighting
+sudo apt install -y wget curl sway waybar wtype foot zsh zsh-autosuggestions zsh-syntax-highlighting qt6ct
 
 # setup config dir
 echo 'creating config dir'
