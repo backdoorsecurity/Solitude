@@ -17,9 +17,9 @@ If you cannot connect to wifi network after install run command `rfkill list` if
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash
 ```
-
-
-
+\n
+\n
+\n
 ### Setup Solitude network vm:
 
 After host setup is complete, install a minimal debian virtual machine in virt-manager. only needs 20GB.
