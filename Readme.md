@@ -16,7 +16,7 @@ If you cannot connect to wifi network after install run command `rfkill list` if
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash
 ```
 
-### Setup Solitude network vm
+### Setup Solitude network vm:
 
 After host setup is complete, install a minimal debian virtual machine in virt-manager. only needs 20GB.
 
@@ -29,11 +29,11 @@ You now have a template for the browser vm.
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/net-vm/install.sh | bash
 ```
 
-### Setup Solitude browser vm
+### Setup Solitude browser vm:
 
 The browser is pretty dang basic, just add existing browser.qcow2, check box for "configure before install", then "add hardware", at the very bottom add "virtio vsock".
-This forwards the browser window through to the host os. 
-This would also be a good time to check OpenGl in Display Spice and 3D acceleration in Video Virtio to enable hardware acceleration in the browser.
+This forwards the browser window through to the host os.
+This would also be a good time to enable OpenGl in Display Spice and 3D acceleration in Video Virtio to enable hardware acceleration in the browser.
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/browser-vm/install.sh | bash
