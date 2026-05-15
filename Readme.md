@@ -1,31 +1,39 @@
  ### THIS IS A WORK IN PROGRESS, UNTIL THIS DISCLAIMER IS REMOVED THESE SCRIPTS WILL LIKELY PRODUCE ERRORS ###
 
 Solitude is built with a minimal lightweight Debian host os, Sway window manager and KVM/QEMU for virtualization, it replaces Xen with a simpler, much lighter stack.
-The system emphasizes a minimal browser and net vm, allowing users to isolate untrusted workloads efficiently. Solitude employs isolation through compartmentalization, making advanced security measures efficient and seamless.
+The system emphasizes a minimal browser and network vm, allowing users to isolate untrusted workloads efficiently. Solitude employs isolation through compartmentalization, making advanced security measures efficient and seamless.
 
-After installing the host operating system, reboot into system, install sudo and run usermod -aG sudo $USER. then reboot. You must follow this for all vms as well.
-
-after running the host operating system script install a minimal debian virtual machine in virt-manager. only needs ~10-20GB.
-to avoid unnecessary work you could cp /var/lib/libvirt/images/net-vm.qcow2 to /var/lib/libvirt/images/browser-vm.qcow2
-
-net-vm:
-In virt-manager add hardware section navigate to pci devices, locate your wifi and ethernet card. pass both through to the net-vm. you may not be able to add the ethernet card without adding the other devices from the iommu group or breaking the group apart.
 
 ### Installation
 
-Install Solitude host operating system:
+### Setup Solitude host operating system:
+
+If you do not install a display manager during install the command sudo and rfkill will not be installed.
+Upon initial install of the host operating system, reboot into system, `apt install sudo -y && usermod -aG sudo $USER` then logout/in or reboot.
+If you cannot connect to wifi network after install run command `rfkill list` if it returns "rfkill not installed" you will need to either connect to ethernet and `apt install -y rfkill` or copy rfkill binary into /sbin to unblock the wifi card.
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash
 ```
 
-install Solitude net-vm
+### Setup Solitude network vm
+
+After host setup is complete, install a minimal debian virtual machine in virt-manager. only needs 20GB.
+
+It would be wise to pass your wireless and/or ethernet card through to the vm rather than use the host's virtual ethernet, this will auto populate your network configs. 
+
+To avoid unnecessary work "prior to running the below script" cp /var/lib/libvirt/images/network.qcow2 to /var/lib/libvirt/images/browser.qcow2
+You now have a template for the browser vm.
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/net-vm/install.sh | bash
 ```
 
-install Solitude browser-vm
+### Setup Solitude browser vm
+
+The browser is pretty dang basic, just add existing browser.qcow2, check box for "configure before install", then "add hardware", at the very bottom add "virtio vsock".
+This forwards the browser window through to the host os. 
+This would also be a good time to check OpenGl in Display Spice and 3D acceleration in Video Virtio to enable hardware acceleration in the browser.
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/browser-vm/install.sh | bash
