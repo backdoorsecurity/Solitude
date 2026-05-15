@@ -4,6 +4,8 @@ Solitude is built with a minimal lightweight Debian host os, Sway window manager
 The system emphasizes a minimal browser and network vm, allowing users to isolate untrusted workloads efficiently. Solitude employs isolation through compartmentalization, making advanced security measures efficient and seamless.
 
 
+
+
 ### Installation
 
 ### Setup Solitude host operating system:
@@ -15,6 +17,8 @@ If you cannot connect to wifi network after install run command `rfkill list` if
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash
 ```
+
+
 
 ### Setup Solitude network vm:
 
@@ -28,6 +32,8 @@ You now have a template for the browser vm.
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/network-vm/install.sh | bash
 ```
+
+
 
 ### Setup Solitude browser vm:
 
