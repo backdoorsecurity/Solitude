@@ -10,7 +10,7 @@ The system emphasizes a minimal browser and network vm, allowing users to isolat
 
 If you do not install a display manager during install the command sudo and rfkill will not be installed.
 Upon initial install of the host operating system, reboot into system, `apt install sudo -y && usermod -aG sudo $USER` then logout/in or reboot.
-If you cannot connect to wifi network after install run command `rfkill list` if it returns "rfkill not installed" you will need to either connect to ethernet and `apt install -y rfkill` or copy rfkill binary into /sbin to unblock the wifi card.
+If you cannot connect to wifi network after install run command `rfkill list` if it returns "rfkill not installed" you will need to either connect to ethernet and `apt install -y rfkill` or copy rfkill binary into /sbin to unblock the wifi card with `rfkill unblock <card id number from rfkill list>`
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash
