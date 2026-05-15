@@ -24,10 +24,10 @@ echo 'downloading dot-files'
 sleep 0.1
 cd /tmp
 git clone https://github.com/backdoorsecurity/Solitude.git && cd Solitude
-cp -r net-vm/dot-files/.config/* $HOME/.config
-sudo cp -r net-vm/dot-files/.config/* $HOME/.config
-cp net-vm/dot-files/.z* $HOME/
-sudo cp net-vm/dot-files/.zshrc /root
+cp -r network-vm/dot-files/.config/* $HOME/.config
+sudo cp -r network-vm/dot-files/.config/* $HOME/.config
+cp network-vm/dot-files/.z* $HOME/
+sudo cp network-vm/dot-files/.zshrc /root
 
 #set shell to zsh
 echo 'switching to zsh'

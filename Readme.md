@@ -26,7 +26,7 @@ To avoid unnecessary work "prior to running the below script" cp /var/lib/libvir
 You now have a template for the browser vm.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/net-vm/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/network-vm/install.sh | bash
 ```
 
 ### Setup Solitude browser vm:
