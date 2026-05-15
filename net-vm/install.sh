@@ -1,6 +1,10 @@
 #!/bin/bash
 
 USER=$USER
+IFACE=eth0
+IP_ADDRESS=10.10.10.1/28
+NETMASK=255.255.255.240
+MTU=9000
 
 # install packages:
 echo 'installing packages'
@@ -27,7 +31,7 @@ sudo cp net-vm/dot-files/.zshrc /root
 
 #set shell to zsh
 echo 'switching to zsh'
-sudo usermod -s /usr/bin/zsh "$USER"
+sudo /sbin/usermod -s /usr/bin/zsh "$USER"
 
 #allow kernel level ip forwarding
 echo "enabling ip forwarding"
@@ -44,15 +48,17 @@ sudo tee /etc/kernel/cmdline > /dev/null << EOF
 net.ifnames=0
 EOF
 
-sudo update-initramfs -u -k all
+sudo /sbin/update-initramfs -u -k all
 
 #fill /etc/network/interfaces
 echo "Configuring eth0 network interface"
 echo "
-# Virtual Ethernet to Host
-auto eth0
-iface eth0 inet static
-    address 10.10.10.1/28
+# virtio network
+auto $IFACE
+iface $IFACE inet static
+        address $IP_ADDRESS
+        netmask $NETMASK
+        MTU=$MTU
 " | sudo tee -a /etc/network/interfaces > /dev/null
 
 echo "/etc/network/interfaces configured"

@@ -1,12 +1,18 @@
 #!/bin/bash
 
 USER=$USER
+IFACE=br0
+IP_ADDRESS=10.10.10.0/28
+NETMASK=255.255.255.240
+IP_ROUTE=10.10.10.1
+NAMESERVER=1.1.1.1
+MTU=9000
 
 # install packages:
 echo 'installing packages'
 sleep 0.1
 sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y
-sudo apt install -y linux-headers-$(uname -r) virt-manager git wget curl sway waybar wtype bridge-utils foot wget zsh zsh-autosuggestions zsh-syntax-highlighting copyq wf-recorder oxygencursors qt6ct
+sudo apt install -y linux-headers-$(uname -r) virt-manager git wget curl sway waybar wtype bridge-utils foot wget zsh zsh-autosuggestions zsh-syntax-highlighting copyq wf-recorder oxygencursors qt6ct waypipe lm-sensors
 
 # setup config dir
 echo 'creating config dir'
@@ -50,12 +56,29 @@ sudo systemctl enable pwr_perf.service
 #set shell to zsh
 echo 'switching shell to zsh'
 sleep 0.1
-sudo usermod -s /usr/bin/zsh "$USER"
-sudo usermod -aG libvirt "$USER"
+sudo /sbin/usermod -s /usr/bin/zsh "$USER"
+#add user to necessary groups
+sudo /sbin/usermod -aG libvirt-qemu libvirt video render "$USER"
 
 #set kernel parameters
+#replace vfio-pci.ids with the pci bus id of any physical devices you intend to pass through to a guest.
+#i use wireless and ethernet nic, nvidia gpu/hd audio card.
+#check with lspci -nnk.
 echo -n "net.ifnames=0 pcie_aspm=force memtest=0 tsx=on i915.enable_fbc=1 i915.enable_psr=1 i915.enable_dc=2 ipv6.disable=1 intel_iommu=on iommu=pt vfio-pci.ids=10de:28e0,10de:22be,10ec:8168,17aa:3842" | tee -a /etc/kernel/cmdline
-update-initramfs -u -k all
+/sbin/update-initramfs -u -k all
+
+#fill /etc/network/interfaces
+echo "Configuring eth0 network interface"
+echo "
+# virtio network
+auto $IFACE
+iface $IFACE inet static
+        address $IP_ADDRESS
+        netmask $NETMASK
+        gateway $IP_ROUTE
+        dns-nameservers $NAMESERVER
+        MTU=$MTU
+" | sudo tee -a /etc/network/interfaces > /dev/null
 
 # can not install iptables in script due to interactive prompt not working in shell
 echo "install iptables and iptables-persistent after script is finished"

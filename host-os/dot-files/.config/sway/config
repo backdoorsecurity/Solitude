@@ -12,7 +12,7 @@ set $term foot
 set $menu wofi --show drun
 
 #fix virt-manager mouse flaw
-exec_always export WLR_NO_HARDWARE_CURSORS=1
+#exec_always export WLR_NO_HARDWARE_CURSORS=1
 
 ###############################################################################################
 
@@ -75,10 +75,11 @@ exec_always export WLR_NO_HARDWARE_CURSORS=1
 
 #	[DISPLAY]
 
-#	output eDP-1 resolution <resolution>@<60/120>Hz scale 1.75
+	output eDP-1 resolution 2560x1600@60Hz scale 1.6
+#        output * resolution 2560x1600@60Hz scale 1.6
 
 #	[TOUCHPAD]
-	input * { 
+	input 10248:262:FTCS0038:00_2808:0106_Touchpad { 
 	dwt enabled
 	tap enable
 	accel_profile adaptive
@@ -86,7 +87,9 @@ exec_always export WLR_NO_HARDWARE_CURSORS=1
         #middle_emulation enabled
 }
 #	[KEYBOARD]
-        input * { 
+	input 1165:49414:ITE_Tech._Inc._ITE_Device(8910)_Keyboard {
+#	input 1165:51605:ITE_Tech._Inc._ITE_Device(8295)_Keyboard {
+#        input 1:1:AT_Translated_Set_2_keyboard {
 	repeat_delay 250
 	repeat_rate 60
 }
@@ -143,9 +146,10 @@ default_border pixel 0
 #title_align center
 
 #set cursor style
-seat * xcursor_theme Oxygen-05-Vibrant-Red 50
-exec_always brightnessctl set 70%
-exec_always pgrep -x wlsunset || wlsunset -t 3200
+seat * xcursor_theme oxy-red-argentina 50
+#exec_always brightnessctl set 70%
+#exec_always pgrep -x wlsunset || wlsunset -t 3200
 font monospace 16
+#set $WLR_RENDERER gles2
 include /etc/sway/config-vars.d/*
 include /etc/sway/config.d/*
