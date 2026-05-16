@@ -62,9 +62,9 @@ sudo /sbin/usermod -aG libvirt-qemu libvirt video render "$USER"
 
 #set kernel parameters
 #replace vfio-pci.ids with the pci bus id of any physical devices you intend to pass through to a guest.
-#i use wireless and ethernet nic, nvidia gpu/hd audio card.
+#I use wireless and ethernet nic, nvidia gpu/hd audio card.
 #check with lspci -nnk.
-echo -n "net.ifnames=0 pcie_aspm=force memtest=0 tsx=on i915.enable_fbc=1 i915.enable_psr=1 i915.enable_dc=2 ipv6.disable=1 intel_iommu=on iommu=pt vfio-pci.ids=10de:28e0,10de:22be,10ec:8168,17aa:3842" | tee -a /etc/kernel/cmdline
+echo -n "net.ifnames=0 pcie_aspm=force memtest=0 tsx=on ipv6.disable=1 intel_iommu=on iommu.passthrough=1 vfio-pci.ids=10de:28e0,10de:22be,10ec:8168,17aa:3842" | tee -a /etc/kernel/cmdline
 /sbin/update-initramfs -u -k all
 
 #fill /etc/network/interfaces

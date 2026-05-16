@@ -12,7 +12,7 @@ MTU=9000
 echo 'installing packages'
 sleep 0.1
 sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y
-sudo apt install -y git wget curl sway waybar waypipe wtype foot zsh zsh-autosuggestions zsh-syntax-highlighting qt6ct
+sudo apt install -y git wget curl sway waybar waypipe wtype foot zsh zsh-autosuggestions zsh-syntax-highlighting qt6ct pulseaudio pulseaudio-utils pavucontrol mesa-utils mesa-vulkan-drivers mesa-va-drivers libgl1-mesa-dri libglx-mesa0 vulkan-tools vainfo libgl1 libegl1 libgles2 zram-tools
 
 # setup config dir
 echo 'creating config dir'
@@ -61,4 +61,8 @@ iface $IFACE inet static
 " | sudo tee -a /etc/network/interfaces > /dev/null
 
 echo "/etc/network/interfaces configured"
+
+echo "enable services"
+systemctl --user enable --now pulseaudio
+
 echo "install your web browser of choice and add name to BROWSER variable in host-operating-system/$HOME/.config/sway/keybindings/browser.kb"
