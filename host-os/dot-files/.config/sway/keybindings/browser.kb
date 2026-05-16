@@ -1,8 +1,36 @@
 #!/bin/bash
 
-BROWSER=brave-browser
+BROWSER="brave-browser"
 
-pkill waypipe
-sleep 0.1
+# Kill any existing waypipe instance
+pkill -9 waypipe 2>/dev/null
+sleep 0.2
+
+# Start waypipe client on host
 waypipe --vsock --threads 4 --socket 3:1234 --compress zstd=1 client &
-ssh browser@10.10.10.2 "waypipe --vsock --socket 2:1234 --compress zstd=1 server "$BROWSER" --enable-features=UseOzonePlatform --ozone-platform=wayland --password-store=basic"
+
+# === Browser flags - comment/uncomment lines to test ===
+
+ssh browser@10.10.10.2 "waypipe --vsock --socket 2:1234 --compress zstd=1 server $BROWSER \
+    --password-store=basic \
+    --enable-features=UseOzonePlatform \
+    --ozone-platform=wayland \
+    --render-node-override=/dev/dri/renderD128 \
+    \
+    # === Core GPU / Acceleration flags (most important) ===
+    --ignore-gpu-blocklist \
+    --use-gl=angle \
+    --use-angle=opengl \
+    --enable-gpu-rasterization \
+    --num-raster-threads=2 \
+    \
+    # === Additional features (try enabling one group at a time) ===
+    --enable-features=VaapiVideoDecoder,WebGPU,CanvasOopRasterization \
+    --enable-zero-copy \
+    \
+    # === Experimental / Risky flags (comment these first if issues occur) ===
+     --enable-features=EnableDrDc \
+     --enable-features=VaapiVideoEncoder \
+"
+
+echo "Brave launched with above flags."
