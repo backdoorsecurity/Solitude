@@ -1,0 +1,2 @@
+#blacklist /home/admin
+blacklist /home/browser

@@ -1,0 +1,11 @@
+blacklist /var/backups
+blacklist /var/cache
+blacklist /var/lib
+blacklist /var/local
+blacklist /var/lock
+blacklist /var/log
+blacklist /var/mail
+blacklist /var/opt
+#blacklist /var/run
+blacklist /var/spool
+blacklist /var/tmp

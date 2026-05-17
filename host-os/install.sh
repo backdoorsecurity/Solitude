@@ -27,7 +27,6 @@ sleep 0.1
 cd /tmp
 git clone https://github.com/backdoorsecurity/Solitude.git && cd Solitude
 cp -r host-os/dot-files/.config/* $HOME/.config
-sudo cp -r host-os/dot-files/.config/* $HOME/.config
 cp host-os/dot-files/.z* $HOME/
 sudo cp host-os/dot-files/.zshrc /root
 
@@ -49,7 +48,8 @@ echo 'installing system service files'
 sleep 0.1
 echo -e "[Unit]\nDescription=Apply system and network profiles\nAfter=sockets.target\n\n[Service]\nType=oneshot\nExecStart=/home/"$USER"/.config/sway/scripts/startup.sh\nRemainAfterExit=no\n\n[Install]\nWantedBy=sockets.target" > /tmp/startup.service
 echo -e "[Unit]\nDescription=Switch cpu turbo and energy bias based on ac/battery\nAfter=sockets.target\n\n[Service]\nType=simple\nExecStart=/"$USER"/.config/sway/scripts/pwr_perf.sh\nRemainAfterExit=yes\n\n[Install]\nWantedBy=sockets.target" > /tmp/pwr_perf.service
-sudo cp /tmp/*.service /etc/systemd/system/
+sudo cp /tmp/startup.service /etc/systemd/system/
+sudo cp /tmp/pwr_perf.service /etc/systemd/system/
 #sudo systemctl enable startup.service
 sudo systemctl enable pwr_perf.service
 
@@ -65,6 +65,8 @@ sudo /sbin/usermod -aG libvirt-qemu libvirt video render "$USER"
 #I use wireless and ethernet nic, nvidia gpu/hd audio card.
 #check with lspci -nnk.
 echo -n "net.ifnames=0 pcie_aspm=force memtest=0 tsx=on ipv6.disable=1 intel_iommu=on iommu.passthrough=1 vfio-pci.ids=10de:28e0,10de:22be,10ec:8168,17aa:3842" | tee -a /etc/kernel/cmdline
+echo "options kvm_intel nested=1" | sudo tee /etc/modprobe.d/kvm.conf
+sudo modprobe kvm_intel nested=1
 /sbin/update-initramfs -u -k all
 
 #fill /etc/network/interfaces

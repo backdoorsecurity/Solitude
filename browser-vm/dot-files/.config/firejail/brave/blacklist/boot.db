@@ -1,0 +1,5 @@
+blacklist /boot/config-7.0.4+deb14-amd64
+blacklist /boot/efi
+blacklist /boot/initrd.img-7.0.4+deb14-amd64
+blacklist /boot/System.map-7.0.4+deb14-amd64
+blacklist /boot/vmlinuz-7.0.4+deb14-amd64

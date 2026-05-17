@@ -12,7 +12,7 @@ MTU=9000
 echo 'installing packages'
 sleep 0.1
 sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y
-sudo apt install -y git wget curl sway waybar waypipe wtype foot zsh zsh-autosuggestions zsh-syntax-highlighting qt6ct pulseaudio pulseaudio-utils pavucontrol mesa-utils mesa-vulkan-drivers mesa-va-drivers libgl1-mesa-dri libglx-mesa0 vulkan-tools vainfo libgl1 libegl1 libgles2 zram-tools
+sudo apt install -y git wget curl sway waybar waypipe wtype foot zsh zsh-autosuggestions zsh-syntax-highlighting qt6ct pulseaudio pulseaudio-utils pavucontrol mesa-utils mesa-vulkan-drivers mesa-va-drivers libgl1-mesa-dri libglx-mesa0 vulkan-tools vainfo libgl1 libegl1 libgles2 zram-tools firejail firejail-profiles
 
 # setup config dir
 echo 'creating config dir'
@@ -27,9 +27,10 @@ sleep 0.1
 cd /tmp
 git clone https://github.com/backdoorsecurity/Solitude.git && cd Solitude
 cp -r browser-vm/dot-files/.config/* $HOME/.config
-sudo cp -r browser-vm/dot-files/.config/* $HOME/.config
 cp browser-vm/dot-files/.z* $HOME/
+
 sudo cp browser-vm/dot-files/.zshrc /root
+
 
 #set shell to zsh
 echo 'switching to zsh'
@@ -59,10 +60,12 @@ iface $IFACE inet static
 	dns-nameservers $NAMESERVER
 	MTU=$MTU
 " | sudo tee -a /etc/network/interfaces > /dev/null
-
 echo "/etc/network/interfaces configured"
 
 echo "enable services"
 systemctl --user enable --now pulseaudio
+
+#enable audio:
+pactl suspend-sink @DEFAULT_SINK@ false
 
 echo "install your web browser of choice and add name to BROWSER variable in host-operating-system/$HOME/.config/sway/keybindings/browser.kb"

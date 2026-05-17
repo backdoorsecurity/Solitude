@@ -10,7 +10,7 @@ MTU=9000
 echo 'installing packages'
 sleep 0.1
 sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y
-sudo apt install -y git wget curl sway waybar wtype foot zsh zsh-autosuggestions zsh-syntax-highlighting qt6ct
+sudo apt install -y git wget curl sway waybar wtype foot zsh zsh-autosuggestions zsh-syntax-highlighting qt6ct systemd-resolved
 
 # setup config dir
 echo 'creating config dir'
