@@ -2,6 +2,7 @@
 
 Solitude is designed for linux power users that require the isolated security model of Qubes os who prefer the cli over gui.
 This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative host and vm's. Your hardware must support pci passthrough.
+
 Featuring the Sway window manager with KVM/QEMU virtualization, it replaces Qubes Xen with a simpler, much lighter stack.
 
 The system employs a minimal lightweight browser and network vm. Emphasizing isolation through compartmentalization, making advanced security measures efficient and seamless.
@@ -16,9 +17,9 @@ Ssh connections should only be possible from the host > vm or vm <> vm, never vm
 ### Solitude host operating system:
 * I will be making a separate detailed how to on installing the host for maximum performance and stability.
 
-As debian does not ship with sway wm, the preferred method is to skip installing a display manager. One catch is the command sudo and rfkill will not be installed. If you cannot connect to wifi network after install, execute command `rfkill list` if it returns "rfkill not installed" you will need to either connect to ethernet and `apt install -y rfkill` or copy the rfkill binary into /sbin from a rescue drive to unblock the wifi card with `rfkill unblock <card id number from rfkill list>`. For this reason I would highly advise to prepare a live rescue drive pre install.
+As debian does not ship with sway wm, the preferred method is to skip installing a display manager. One catch is the command sudo and rfkill will not be installed. If you cannot connect to wifi network after install, execute command `bash rfkill list` if it returns "rfkill not installed" you will need to either connect to ethernet and `apt install -y rfkill` or copy the rfkill binary into /sbin from a rescue drive to unblock the wifi card with `rfkill unblock <card id number from rfkill list>`. For this reason I would highly advise to prepare a live rescue drive pre install.
 
-Upon initial install of the host operating system, reboot into system. As root: `apt install sudo -y && usermod -aG sudo $USER` then logout/in or reboot and run the install script. "This is neccessary for the script to work, i am working on an updated script which does not require sudo.
+Upon initial install of the host operating system, reboot into system. As root: ` bash apt install sudo -y && usermod -aG sudo $USER` then logout/in or reboot and run the install script. "This is neccessary for the script to work, i am working on an updated script which does not require sudo.
 
 # Hotkey map:
 alt+a,s,d,f,g:	workspaces 1-5
