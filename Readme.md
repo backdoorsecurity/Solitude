@@ -18,7 +18,9 @@ Ssh connections should only be possible from host > vm and/or vm <> vm if needed
 * I will be making a separate detailed how to on installing the host for maximum performance and stability.
 
 As debian does not ship with sway wm, the preferred method is to skip installing a display manager.
+
 One catch is the command sudo and rfkill will not be installed. If you cannot connect to wifi network after install, execute command "rfkill list", if it returns "rfkill not installed" you will need to either connect to ethernet and `apt install -y rfkill` or copy the rfkill binary into /sbin from a rescue drive to unblock the wifi card with `rfkill unblock <card id number from rfkill list>`.
+
 For this reason I would highly advise preparing a live rescue drive pre install.
 
 Upon initial install of the host operating system, reboot into system. As root: `apt install sudo -y && usermod -aG sudo $USER` then logout/in or reboot and run the install script. "This is neccessary for the script to work, i am working on an updated script which does not require sudo.
