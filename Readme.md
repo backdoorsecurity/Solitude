@@ -1,9 +1,15 @@
+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SOLITUDE OS
+
+
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!!!UNTIL THIS DISCLAIMER IS REMOVED, THESE SCRIPTS WILL LIKELY PRODUCE ERRORS!!!
 
 Solitude is designed for linux power users that require the isolated security model of Qubes os who prefer the cli over gui.
-This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative host and vm's. Your hardware must support pci passthrough.
 
-Featuring the Sway window manager with KVM/QEMU virtualization, it replaces Qubes Xen with a simpler, much lighter stack.
+This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative host and vm's. 
+Your hardware must support pci passthrough.
+
+Featuring the Sway window manager with KVM/QEMU virtualization, it replaces Qubes Xen Model with a simpler, much lighter stack.
 
 The system employs a minimal lightweight browser and network vm. Emphasizing isolation through compartmentalization, making advanced security measures efficient and seamless.
 
@@ -13,6 +19,7 @@ Ssh connections should only be possible from host > vm and/or vm <> vm if needed
 
 
 # Installation
+
 # Solitude host operating system:
 * I will be making a separate detailed how to on installing the host for maximum performance and stability.
 
