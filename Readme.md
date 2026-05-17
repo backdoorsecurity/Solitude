@@ -46,13 +46,13 @@ alt+"numpad7":  internet mode:  allow host network access
 alt+"numpad4":  isolated mode:  deny host network access, allow vm's access network
 
 alt+"numpad1":  airgapped mode: disable all external network access, host <> vm <> vm communication through all ports
-
+```
 these can be changed in ~/.config/sway/config and ~/.config/sway/keybindings
 
-# setup
+# install
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash
-
+```
 
 
 
@@ -70,10 +70,10 @@ I have recently switched to systemd-networkd in the network vm. I will be adding
 
 Depending on your security needs snort3 can also be run in inline/bridged ips mode between the physical and veth ifaces, I will be adding scripts and configs to set this up in the future.
 
-# setup
+# install
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/network-vm/install.sh | bash
-
+```
 
 
 
@@ -89,7 +89,7 @@ The command to start the web browser is sent via ssh to the browser vm, it is ne
 This would also be a good time to enable OpenGl in Display Spice and 3D acceleration in Video Virtio to enable hardware acceleration in the web browser.
 You can verify acceleration by entering brave://gpu in url bar.
 
-# setup
+# install
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/browser-vm/install.sh | bash
-
+```
