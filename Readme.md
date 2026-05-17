@@ -22,7 +22,8 @@ One catch is the command sudo and rfkill will not be installed. If you cannot co
 
 For this reason I would highly advise preparing a live rescue drive pre install.
 
-Upon initial install of the host operating system, reboot into system. As root: `apt install sudo -y && usermod -aG sudo $USER` then logout/in or reboot and run the install script. "This is neccessary for the script to work, i am working on an updated script which does not require sudo.
+Upon initial install of the host operating system, reboot into system. As root: ```apt install sudo -y && usermod -aG sudo $USER```
+then logout/in or reboot and run the install script. "This is neccessary for the script to work, i am working on an updated script which does not require sudo.
 
 # Hotkey map:
 ```text
@@ -63,11 +64,10 @@ After host setup is complete, install a minimal debian virtual machine in virt-m
 It would be wise to pass your wireless and/or ethernet card through to the vm rather than use the host's virtual ethernet, this will auto populate your wireless/ethernet network configs. 
 The host install script automatically detects the pci ids and adds them to the vfio/iommu kernel parameters.
 
-To avoid unnecessary work "prior to running the below script" 
+To avoid unnecessary work "prior to running the install script"
 ```text
 cp /var/lib/libvirt/images/network.qcow2 /var/lib/libvirt/images/browser.qcow2
 ```
-
 You now have a template for the browser vm.
 
 I have recently switched to systemd-networkd in the network vm. I will be adding a prompt in the script allowing the user to select the old /etc/network/interfaces or systemd-networkd. "I have had issues with the old network convention".
