@@ -64,7 +64,8 @@ After host setup is complete, install a minimal debian virtual machine in virt-m
 It would be wise to pass your wireless and/or ethernet card through to the vm rather than use the host's virtual ethernet, this will auto populate your wireless/ethernet network configs. 
 The host install script automatically detects the pci ids and adds them to the vfio/iommu kernel parameters.
 
-To avoid unnecessary work "prior to running the below script" ```cp /var/lib/libvirt/images/network.qcow2 /var/lib/libvirt/images/browser.qcow2```
+To avoid unnecessary work "prior to running the below script" 
+ ```cp /var/lib/libvirt/images/network.qcow2 /var/lib/libvirt/images/browser.qcow2```
 You now have a template for the browser vm.
 
 I have recently switched to systemd-networkd in the network vm. I will be adding a prompt in the script allowing the user to select the old /etc/network/interfaces or systemd-networkd. "I have had issues with the old network convention".
