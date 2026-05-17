@@ -26,8 +26,7 @@ For this reason I would highly advise preparing a live rescue drive pre install.
 Upon initial install of the host operating system, reboot into system. As root: `apt install sudo -y && usermod -aG sudo $USER` then logout/in or reboot and run the install script. "This is neccessary for the script to work, i am working on an updated script which does not require sudo.
 
 # Hotkey map:
-```html
-<pre>
+```text
 alt+a,s,d,f,g: workspaces 1-5
 
 alt+q:         executes ~/.config/sway/keybindings/browser.kb
@@ -49,9 +48,8 @@ alt+"numpad4":  isolated mode:  deny host network access, allow vm's access netw
 alt+"numpad1":  airgapped mode: disable all external network access, host <> vm <> vm communication through all ports
 
 these can be changed in ~/.config/sway/config and ~/.config/sway/keybindings
-</pre>
 
-
+# setup
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash
 ```
@@ -72,6 +70,7 @@ I have recently switched to systemd-networkd in the network vm. I will be adding
 
 Depending on your security needs snort3 can also be run in inline/bridged ips mode between the physical and veth ifaces, I will be adding scripts and configs to set this up in the future.
 
+# setup
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/network-vm/install.sh | bash
 ```
@@ -90,6 +89,7 @@ The command to start the web browser is sent via ssh to the browser vm, it is ne
 This would also be a good time to enable OpenGl in Display Spice and 3D acceleration in Video Virtio to enable hardware acceleration in the web browser.
 You can verify acceleration by entering brave://gpu in url bar.
 
+# setup
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/browser-vm/install.sh | bash
 ```
