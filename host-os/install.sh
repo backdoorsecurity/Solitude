@@ -7,6 +7,7 @@ NETMASK=255.255.255.240
 IP_ROUTE=10.10.10.1
 NAMESERVER=1.1.1.1
 MTU=9000
+PCI_IDS=$(lspci -nn | grep -iE 'Ethernet|WiFi|NVIDIA' | grep -oP '\[\K[0-9a-f]{4}:[0-9a-f]{4}' | sort | uniq | tr '\n' ',' | sed 's/,$//')
 
 # install packages:
 echo 'installing packages'
@@ -58,13 +59,13 @@ echo 'switching shell to zsh'
 sleep 0.1
 sudo /sbin/usermod -s /usr/bin/zsh "$USER"
 #add user to necessary groups
-sudo /sbin/usermod -aG libvirt-qemu libvirt video render "$USER"
+sudo /sbin/usermod -aG libvirt-qemu,libvirt,video,render "$USER"
 
 #set kernel parameters
 #replace vfio-pci.ids with the pci bus id of any physical devices you intend to pass through to a guest.
 #I use wireless and ethernet nic, nvidia gpu/hd audio card.
 #check with lspci -nnk.
-echo -n "net.ifnames=0 pcie_aspm=force memtest=0 tsx=on ipv6.disable=1 intel_iommu=on iommu.passthrough=1 vfio-pci.ids=10de:28e0,10de:22be,10ec:8168,17aa:3842" | tee -a /etc/kernel/cmdline
+echo -n "intel_iommu=on iommu.passthrough=1 vfio-pci.ids=${PCI_IDS} net.ifnames=0 pcie_aspm=force memtest=0 tsx=on ipv6.disable=1" | tee -a /etc/kernel/cmdline
 echo "options kvm_intel nested=1" | sudo tee /etc/modprobe.d/kvm.conf
 sudo modprobe kvm_intel nested=1
 /sbin/update-initramfs -u -k all
