@@ -46,8 +46,9 @@ alt+"numpad7":  internet mode:  allow host network access
 alt+"numpad4":  isolated mode:  deny host network access, allow vm's access network
 
 alt+"numpad1":  airgapped mode: disable all external network access, host <> vm <> vm communication through all ports
-```
+
 these can be changed in ~/.config/sway/config and ~/.config/sway/keybindings
+```
 
 # install
 ```
@@ -63,7 +64,7 @@ After host setup is complete, install a minimal debian virtual machine in virt-m
 It would be wise to pass your wireless and/or ethernet card through to the vm rather than use the host's virtual ethernet, this will auto populate your wireless/ethernet network configs. 
 The host install script automatically detects the pci ids and adds them to the vfio/iommu kernel parameters.
 
-To avoid unnecessary work "prior to running the below script" ```text cp /var/lib/libvirt/images/network.qcow2 /var/lib/libvirt/images/browser.qcow2```
+To avoid unnecessary work "prior to running the below script" ```cp /var/lib/libvirt/images/network.qcow2 /var/lib/libvirt/images/browser.qcow2```
 You now have a template for the browser vm.
 
 I have recently switched to systemd-networkd in the network vm. I will be adding a prompt in the script allowing the user to select the old /etc/network/interfaces or systemd-networkd. "I have had issues with the old network convention".
@@ -82,14 +83,15 @@ curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/netw
 With the massive attack surface a web browser presents I have built an extremely restrictive firejail sandbox profile in ~/.config/firejail/brave.
 
 My browser start script is optimized for chrome based browsers. Specifically brave-browser.
-The firejail configs may work for any chrome based browsers with miminal tweaks to the blacklisting files located in ```bash ~.config/firejail/brave/blacklistings```
-also make sure to add paths to ~/.config/firejail/brave/blacklists/home.db that should not be accessible by the web browser.
-You can check accessible directories my entering "file:///" into url bar and explore your filesystem as the browser can.
+The firejail configs may work for any chrome based browsers with miminal tweaks to the blacklisting files located in `~.config/firejail/brave/blacklistings`
+also make sure to add paths to `~/.config/firejail/brave/blacklists/home.db` that should not be accessible by the web browser.
+You can check accessible directories my entering `file:///` into url bar and explore your filesystem as the browser can.
 
 Setting up the browser is pretty dang basic, just add existing browser.qcow2 in virt-manager gui, check box for "configure before install", then "add hardware", at the very bottom add "virtio vsock". This forwards the browser window through to the host os.
 The command to start the web browser is sent via ssh to the browser vm, it is neccessary to set ssh hostkeys.
+
 This would also be a good time to enable OpenGl in Display Spice and 3D acceleration in Video Virtio to enable hardware acceleration in the web browser.
-You can verify acceleration by entering brave://gpu in url bar.
+You can verify acceleration by entering `brave://gpu` in url bar.
 
 # install
 ```
