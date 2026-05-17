@@ -1,4 +1,4 @@
-##THIS IS A WORK IN PROGRESS, UNTIL THIS DISCLAIMER IS REMOVED THESE SCRIPTS WILL LIKELY PRODUCE ERRORS
+        #THIS IS A WORK IN PROGRESS, UNTIL THIS DISCLAIMER IS REMOVED THESE SCRIPTS WILL LIKELY PRODUCE ERRORS#
 
 Solitude is designed for linux power users that require the isolated security model of Qubes os who prefer the cli over gui.
 This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative host and vm's. Your hardware must support pci passthrough.
@@ -101,15 +101,32 @@ curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/netw
 With the massive attack surface a web browser presents I have built an extremely restrictive firejail sandbox profile in ~/.config/firejail/brave.
 
 My browser start script is optimized for chrome based browsers. Specifically brave-browser.
-The firejail configs may work for any chrome based browsers with miminal tweaks to the blacklisting files located in `~.config/firejail/brave/blacklistings`
-also make sure to add paths to `~/.config/firejail/brave/blacklists/home.db` that should not be accessible by the web browser.
-You can check accessible directories my entering `file:///` into url bar and explore your filesystem as the browser can.
+
+My firejail configs will work for any chrome based browsers with miminal tweaks to the blacklisting files located in
+```text
+~.config/firejail/brave/blacklistings`
+```
+also make sure to add paths to
+```text
+~/.config/firejail/brave/blacklists/home.db
+```
+that should not be accessible by the web browser.
+
+You can check accessible directories my entering
+```text
+file:///
+```
+into url bar and explore your filesystem as the browser can.
 
 Setting up the browser is pretty dang basic, just add existing browser.qcow2 in virt-manager gui, check box for "configure before install", then "add hardware", at the very bottom add "virtio vsock". This forwards the browser window through to the host os.
 The command to start the web browser is sent via ssh to the browser vm, it is neccessary to set ssh hostkeys.
 
 This would also be a good time to enable OpenGl in Display Spice and 3D acceleration in Video Virtio to enable hardware acceleration in the web browser.
-You can verify acceleration by entering `brave://gpu` in url bar.
+You can verify acceleration by entering
+```text
+brave://gpu
+```
+in url bar.
 
 # install
 ```
