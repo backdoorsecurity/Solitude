@@ -116,19 +116,19 @@ My firejail configs will work for any chrome based browsers with miminal tweaks 
 ```text
 ~.config/firejail/brave/blacklistings`
 ```
-also make sure to add paths to
+also make sure to add user paths in /home to
 ```text
 ~/.config/firejail/brave/blacklists/home.db
 ```
-that should not be accessible by the web browser.
+which should not be accessible by the web browser.
 
 You can check accessible directories my entering
 ```text
 file:///
 ```
-into url bar and explore your filesystem as the browser can.
+into url bar and exploring your filesystem as the browser can.
 
-Setting up the browser is pretty dang basic, just add existing browser.qcow2 in virt-manager gui, check box for "configure before install", then "add hardware", at the very bottom add "virtio vsock". This forwards the browser window through to the host os.
+Setting up the browser is pretty dang basic, just add existing browser.qcow2 in virt-manager gui, check box for `customize configuration before install`, then `add hardware`, at the very bottom add `virtio vsock`. This forwards the browser window through to the host os.
 The command to start the web browser is sent via ssh to the browser vm, it is neccessary to set ssh hostkeys.
 
 This would also be a good time to enable OpenGl in Display Spice and 3D acceleration in Video Virtio to enable hardware acceleration in the web browser.
