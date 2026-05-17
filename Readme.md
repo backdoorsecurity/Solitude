@@ -8,7 +8,7 @@ Featuring the Sway window manager with KVM/QEMU virtualization, it replaces Qube
 The system employs a minimal lightweight browser and network vm. Emphasizing isolation through compartmentalization, making advanced security measures efficient and seamless.
 
 Ideally all communication should be done through ssh. Be sure to set up ssh host keys and disable password authentication.
-Ssh connections should only be possible from the host > vm or vm <> vm, never vm > host.
+Ssh connections should only be possible from host > vm and/or vm <> vm if needed, never vm > host.
 
 
 
