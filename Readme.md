@@ -1,4 +1,4 @@
-# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ```SOLITUDE```
+# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `SOLITUDE`
 
 
 
@@ -14,6 +14,7 @@ Featuring the Sway window manager with KVM/QEMU virtualization, it replaces Qube
 The system employs a minimal lightweight browser and network vm. Emphasizing isolation through compartmentalization, making advanced security measures efficient and seamless.
 
 Ideally all communication should be done through ssh. Be sure to set up ssh host keys and disable password authentication.
+
 Ssh connections should only be possible from host > vm and/or vm <> vm if needed, never vm > host.
 
 
@@ -66,11 +67,11 @@ then logout/in or reboot and run the install script. "This is neccessary for the
 
 `alt+v:           paste`
 
-`alt+"numpad7":   internet mode:  host<>internet vm<>internet`
+`alt+"numpad7":   internet mode:  host<>internet vm's <> internet`
 
-`alt+"numpad4":   isolated mode:  host<x>internet vm<>internet "default"`
+`alt+"numpad4":   isolated mode:  host<x>internet vm's <> internet "default mode"`
 
-`alt+"numpad1":   airgapped mode: host<x>internet vm<x>internet host<>vm<>vm`
+`alt+"numpad1":   airgapped mode: host<x>internet vm's <x> internet host <> vm's <> vm's`
 
 `these can be changed in ~/.config/sway/config and ~/.config/sway/keybindings`
 
