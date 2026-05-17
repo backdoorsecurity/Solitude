@@ -18,9 +18,9 @@ Ssh connections should only be possible from host > vm and/or vm <> vm if needed
 
 
 
-# Installation
+## Installation
 
-# Solitude host operating system:
+### Solitude host operating system:
 * I will be making a separate detailed how to on installing the host for maximum performance and stability.
 
 As debian does not ship with sway wm, the preferred method is to skip installing a display manager.
@@ -47,7 +47,7 @@ apt install sudo -y && usermod -aG sudo $USER
 then logout/in or reboot and run the install script. "This is neccessary for the script to work, i am working on an updated script which does not require sudo.
 
 
-# Hotkey map:
+### Hotkey map:
 
 `alt+a,s,d,f,g:   workspaces 1-5`
 
@@ -72,7 +72,7 @@ then logout/in or reboot and run the install script. "This is neccessary for the
 `these can be changed in ~/.config/sway/config and ~/.config/sway/keybindings`
 
 
-# install
+### install
 ```
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash
 ```
@@ -96,7 +96,7 @@ I have recently switched to systemd-networkd in the network vm. I will be adding
 
 Depending on your security needs snort3 can also be run in inline/bridged ips mode between the physical and veth ifaces, I will be adding scripts and configs to set this up in the future.
 
-# install
+### install
 ```
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/network-vm/install.sh | bash
 ```
@@ -135,7 +135,7 @@ brave://gpu
 ```
 in url bar.
 
-# install
+### install
 ```
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/browser-vm/install.sh | bash
 ```
