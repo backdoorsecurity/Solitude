@@ -52,7 +52,7 @@ these can be changed in ~/.config/sway/config and ~/.config/sway/keybindings
 # setup
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash
-```
+
 
 
 
@@ -73,7 +73,7 @@ Depending on your security needs snort3 can also be run in inline/bridged ips mo
 # setup
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/network-vm/install.sh | bash
-```
+
 
 
 
@@ -92,4 +92,4 @@ You can verify acceleration by entering brave://gpu in url bar.
 # setup
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/browser-vm/install.sh | bash
-```
+
