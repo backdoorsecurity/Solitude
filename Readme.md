@@ -27,27 +27,27 @@ Upon initial install of the host operating system, reboot into system. As root: 
 
 # Hotkey map:
 
-`alt+a,s,d,f,g:	workspaces 1-5`
+`alt+a,s,d,f,g`	`workspaces 1-5`
 
-`alt+q:		executes ~/.config/sway/keybindings/browser.kb.`
+`alt+q:`	`executes ~/.config/sway/keybindings/browser.kb`
 
-`alt+w,e,r:	foot terminal.`
+`alt+w,e,r`	`foot terminal`
 
-`alt+t:		virt-manager.`
+`alt+t`		`virt-manager`
 
-`alt+x:		kill window.`
+`alt+x`		`kill window`
 
-`alt+c:		copy.`
+`alt+c`		`copy`
 
-`alt+v:		paste.`
+`alt+v`		`paste`
 
-`alt+"numpad7"	internet mode:	allow host internet.`
+`alt+"numpad7"`	`internet mode:	allow host internet`
 
-`alt+"numpad4"	isolated mode:	deny host network, allow vm's network.`
+`alt+"numpad4"`	`isolated mode:	deny host network, allow vm's network`
 
-`alt+"numpad1"	airgapped mode:	disable external network access, host <> vm <> vm communication through all ports.`
+`alt+"numpad1"`	`airgapped mode:	disable external network access, host <> vm <> vm communication through all ports`
 
-`these can be changed in ~/.config/sway/config and ~/.config/sway/keybindings.`
+`these can be changed in ~/.config/sway/config and ~/.config/sway/keybindings`
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash
