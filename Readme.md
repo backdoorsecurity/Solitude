@@ -26,17 +26,28 @@ For this reason I would highly advise preparing a live rescue drive pre install.
 Upon initial install of the host operating system, reboot into system. As root: `apt install sudo -y && usermod -aG sudo $USER` then logout/in or reboot and run the install script. "This is neccessary for the script to work, i am working on an updated script which does not require sudo.
 
 # Hotkey map:
-alt+a,s,d,f,g:	workspaces 1-5
-alt+q:		executes ~/.config/sway/keybindings/browser.kb
-alt+w,e,r:	foot terminal
-alt+t:		virt-manager
-alt+x:		kill window
-alt+c:		copy
-alt+v:		paste
-alt+"numpad7"	internet mode:	allow host internet
-alt+"numpad4"	isolated mode:	deny host network, allow vm's network
-alt+"numpad1"	airgapped mode:	disable external network access, host <> vm <> vm communication through all ports.
-these can be changed in ~/.config/sway/config and ~/.config/sway/keybindings
+
+`alt+a,s,d,f,g:	workspaces 1-5`
+
+`alt+q:		executes ~/.config/sway/keybindings/browser.kb.`
+
+`alt+w,e,r:	foot terminal.`
+
+`alt+t:		virt-manager.`
+
+`alt+x:		kill window.`
+
+`alt+c:		copy.`
+
+`alt+v:		paste.`
+
+`alt+"numpad7"	internet mode:	allow host internet.`
+
+`alt+"numpad4"	isolated mode:	deny host network, allow vm's network.`
+
+`alt+"numpad1"	airgapped mode:	disable external network access, host <> vm <> vm communication through all ports.`
+
+`these can be changed in ~/.config/sway/config and ~/.config/sway/keybindings.`
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash
