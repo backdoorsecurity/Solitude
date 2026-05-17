@@ -1,4 +1,4 @@
- ### THIS IS A WORK IN PROGRESS, UNTIL THIS DISCLAIMER IS REMOVED THESE SCRIPTS WILL LIKELY PRODUCE ERRORS ###
+#THIS IS A WORK IN PROGRESS, UNTIL THIS DISCLAIMER IS REMOVED THESE SCRIPTS WILL LIKELY PRODUCE ERRORS
 
 Solitude is designed for linux power users that require the isolated security model of Qubes os who prefer the cli over gui.
 This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative host and vm's. Your hardware must support pci passthrough.
@@ -12,9 +12,8 @@ Ssh connections should only be possible from host > vm and/or vm <> vm if needed
 
 
 
-### Installation
-
-### Solitude host operating system:
+# Installation
+# Solitude host operating system:
 * I will be making a separate detailed how to on installing the host for maximum performance and stability.
 
 As debian does not ship with sway wm, the preferred method is to skip installing a display manager.
@@ -65,7 +64,10 @@ It would be wise to pass your wireless and/or ethernet card through to the vm ra
 The host install script automatically detects the pci ids and adds them to the vfio/iommu kernel parameters.
 
 To avoid unnecessary work "prior to running the below script" 
- ```cp /var/lib/libvirt/images/network.qcow2 /var/lib/libvirt/images/browser.qcow2```
+```text
+cp /var/lib/libvirt/images/network.qcow2 /var/lib/libvirt/images/browser.qcow2
+```
+
 You now have a template for the browser vm.
 
 I have recently switched to systemd-networkd in the network vm. I will be adding a prompt in the script allowing the user to select the old /etc/network/interfaces or systemd-networkd. "I have had issues with the old network convention".
