@@ -116,11 +116,10 @@ My firejail configs will work for any chrome based browsers with miminal tweaks 
 ```text
 ~.config/firejail/brave/blacklistings`
 ```
-also make sure to add user paths in /home to
+also make sure to add user paths in /home which should not be accessible by the web browser to:
 ```text
 ~/.config/firejail/brave/blacklists/home.db
 ```
-which should not be accessible by the web browser.
 
 You can check accessible directories my entering
 ```text
