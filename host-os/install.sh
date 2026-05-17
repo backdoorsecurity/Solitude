@@ -62,12 +62,12 @@ sudo /sbin/usermod -s /usr/bin/zsh "$USER"
 sudo /sbin/usermod -aG libvirt-qemu,libvirt,video,render "$USER"
 
 #set kernel parameters
-#replace vfio-pci.ids with the pci bus id of any physical devices you intend to pass through to a guest.
-#I use wireless and ethernet nic, nvidia gpu/hd audio card.
-#check with lspci -nnk.
 echo -n "intel_iommu=on iommu.passthrough=1 vfio-pci.ids=${PCI_IDS} net.ifnames=0 pcie_aspm=force memtest=0 tsx=on ipv6.disable=1" | tee -a /etc/kernel/cmdline
 echo "options kvm_intel nested=1" | sudo tee /etc/modprobe.d/kvm.conf
 sudo modprobe kvm_intel nested=1
+sudo modprobe vfio
+sudo modprobe vfio-pci
+sudo modprobe vhost_vsock
 /sbin/update-initramfs -u -k all
 
 #fill /etc/network/interfaces
