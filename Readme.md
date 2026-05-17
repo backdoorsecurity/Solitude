@@ -47,6 +47,9 @@ apt install sudo -y && usermod -aG sudo $USER
 then logout/in or reboot and run the install script. "This is neccessary for the script to work, i am working on an updated script which does not require sudo.
 
 
+
+
+
 ### Hotkey map:
 
 `alt+a,s,d,f,g:   workspaces 1-5`
