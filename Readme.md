@@ -41,39 +41,29 @@ then logout/in or reboot and run the install script. "This is neccessary for the
 
 
 # Hotkey map:
-```
-alt+a,s,d,f,g:   workspaces 1-5
-```
-```
-alt+q:           executes ~/.config/sway/keybindings/browser.kb
-```
-```
-alt+w,e,r:       foot terminal
-```
-```
-alt+t:           virt-manager
-```
-```
-alt+x:           kill window
-```
-```
-alt+c:           copy
-```
-```
-alt+v:           paste
-```
-```
-alt+"numpad7":   internet mode:  host<>internet vm<>internet
-```
-```
-alt+"numpad4":   isolated mode:  host<x>internet vm<>internet "default"
-```
-```
-alt+"numpad1":   airgapped mode: host<x>internet vm<x>internet host<>vm<>vm
-```
-```
-these can be changed in ~/.config/sway/config and ~/.config/sway/keybindings
-```
+
+`alt+a,s,d,f,g:   workspaces 1-5`
+
+`alt+q:           executes ~/.config/sway/keybindings/browser.kb`
+
+`alt+w,e,r:       foot terminal`
+
+`alt+t:           virt-manager`
+
+`alt+x:           kill window`
+
+`alt+c:           copy`
+
+`alt+v:           paste`
+
+`alt+"numpad7":   internet mode:  host<>internet vm<>internet`
+
+`alt+"numpad4":   isolated mode:  host<x>internet vm<>internet "default"`
+
+`alt+"numpad1":   airgapped mode: host<x>internet vm<x>internet host<>vm<>vm`
+
+`these can be changed in ~/.config/sway/config and ~/.config/sway/keybindings`
+
 
 # install
 ```
