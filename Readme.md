@@ -1,4 +1,4 @@
-        #THIS IS A WORK IN PROGRESS, UNTIL THIS DISCLAIMER IS REMOVED THESE SCRIPTS WILL LIKELY PRODUCE ERRORS#
+&nbsp;&nbsp;&nbsp;&nbsp;!!!THIS IS A WORK IN PROGRESS, UNTIL THIS DISCLAIMER IS REMOVED THESE SCRIPTS WILL LIKELY PRODUCE ERRORS!!!
 
 Solitude is designed for linux power users that require the isolated security model of Qubes os who prefer the cli over gui.
 This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative host and vm's. Your hardware must support pci passthrough.
@@ -79,7 +79,7 @@ After host setup is complete, install a minimal debian virtual machine in virt-m
 It would be wise to pass your wireless and/or ethernet card through to the vm rather than use the host's virtual ethernet, this will auto populate your wireless/ethernet network configs. 
 The host install script automatically detects the pci ids and adds them to the vfio/iommu kernel parameters.
 
-To avoid unnecessary work "prior to running the install script"
+To avoid unnecessary work "prior to running the install script" poweroff the network vm and:
 ```text
 cp /var/lib/libvirt/images/network.qcow2 /var/lib/libvirt/images/browser.qcow2
 ```
