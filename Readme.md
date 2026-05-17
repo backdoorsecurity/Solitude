@@ -64,12 +64,13 @@ curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/netw
 
 With the massive attack surface a web browser presents I have built an extremely restrictive firejail sandbox profile in ~/.config/firejail/brave.
 
-While any web browser can be used, my browser start script is optimized for chrome based browsers. Specifically brave-browser. While any browser could be configured in ~/.config/sway/keybindings/browser.kb, the firejail configs may work for any chrome based browsers as well with miminal tweaks to blacklisting files for the browser binaries.
+While any web browser can be used, my browser start script is optimized for chrome based browsers. Specifically brave-browser. While any browser could be configured in ~/.config/sway/keybindings/browser.kb, the firejail configs may work for any chrome based browsers as well with miminal tweaks to blacklisting files for the browser binaries. also make sure to add paths to ~/.config/firejail/brave/blacklists/home.db that should not be accessible by the web browser.
+You can check accessible directories my entering "file:///" into url bar and explore your filesystem as the browser can.
 
 Setting up the browser is pretty dang basic, just add existing browser.qcow2 in virt-manager gui, check box for "configure before install", then "add hardware", at the very bottom add "virtio vsock". This forwards the browser window through to the host os.
 The command to start the web browser is sent via ssh to the browser vm, it is neccessary to set ssh hostkeys.
 This would also be a good time to enable OpenGl in Display Spice and 3D acceleration in Video Virtio to enable hardware acceleration in the web browser.
-You can verify acceleration by typing brave://gpu in url bar.
+You can verify acceleration by entering brave://gpu in url bar.
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/browser-vm/install.sh | bash
