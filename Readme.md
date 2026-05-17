@@ -1,4 +1,4 @@
-#THIS IS A WORK IN PROGRESS, UNTIL THIS DISCLAIMER IS REMOVED THESE SCRIPTS WILL LIKELY PRODUCE ERRORS
+##THIS IS A WORK IN PROGRESS, UNTIL THIS DISCLAIMER IS REMOVED THESE SCRIPTS WILL LIKELY PRODUCE ERRORS
 
 Solitude is designed for linux power users that require the isolated security model of Qubes os who prefer the cli over gui.
 This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative host and vm's. Your hardware must support pci passthrough.
@@ -32,34 +32,46 @@ rfkill unblock <card id number from rfkill list>
 ```
 For this reason I would highly advise preparing a live rescue drive pre install.
 
+
 Upon initial install of the host operating system, reboot into system. As root:
 ``` text
 apt install sudo -y && usermod -aG sudo $USER
 ```
 then logout/in or reboot and run the install script. "This is neccessary for the script to work, i am working on an updated script which does not require sudo.
 
+
 # Hotkey map:
-```text
-alt+a,s,d,f,g: workspaces 1-5
-
-alt+q:         executes ~/.config/sway/keybindings/browser.kb
-
-alt+w,e,r:      foot terminal
-
-alt+t:          virt-manager
-
-alt+x:          kill window
-
-alt+c:          copy
-
-alt+v:          paste
-
-alt+"numpad7":  internet mode:  allow host network access
-
-alt+"numpad4":  isolated mode:  deny host network access, allow vm's access network
-
-alt+"numpad1":  airgapped mode: disable all external network access, host <> vm <> vm communication through all ports
-
+```
+alt+a,s,d,f,g:   workspaces 1-5
+```
+```
+alt+q:           executes ~/.config/sway/keybindings/browser.kb
+```
+```
+alt+w,e,r:       foot terminal
+```
+```
+alt+t:           virt-manager
+```
+```
+alt+x:           kill window
+```
+```
+alt+c:           copy
+```
+```
+alt+v:           paste
+```
+```
+alt+"numpad7":   internet mode:  host<>internet vm<>internet
+```
+```
+alt+"numpad4":   isolated mode:  host<x>internet vm<>internet "default"
+```
+```
+alt+"numpad1":   airgapped mode: host<x>internet vm<x>internet host<>vm<>vm
+```
+```
 these can be changed in ~/.config/sway/config and ~/.config/sway/keybindings
 ```
 
