@@ -6,9 +6,10 @@
 <h3 align="center">
 Solitude is an operating system configuration, designed for linux power users who require the isolated security  
 model of Qubes os but prefer the cli.  
-This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative  
-host and vm's. Your hardware must support pci passthrough.  
-Using Sway wm and KVM/QEMU virtualization, this replaces the Qubes Xen Model with a simpler, much lighter stack.  
+
+This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative
+host and vm's. Your hardware must support pci passthrough. Using Sway wm and KVM/QEMU virtualization,
+this replaces the Qubes Xen Model with a simpler, much lighter stack.  
   
   
 The system utilizes a minimal lightweight browser and network vm. Emphasizing isolation through compartmentalization,
