@@ -24,7 +24,10 @@ Installed drivers in the vm and had achieved full gpu passthrough.
 <h3 align="center">
 At that time I had no idea I was starting to build my own distro configuration.
 I knew when I started my business I was either going to be a successful mechanic or I was going to spend a lot of time on my computer. Been on my own for about 2 years now. Worked an average of 1-2 days a week.
-Kinda sucks being slow and having to live a minimalist lifestyle but I just cant work for any more idiots.
+Kinda sucks being slow and having to live a minimalist lifestyle but I just cant work for any more idiots.  
+</h3>
+  
+<h3 align="center">
 so computers are kinda my jam, and Im hoping this project will shoot me into the tech industry.
 </h3>
   
@@ -34,11 +37,15 @@ named pipes: worked decent but the models would jam the pipe. restart.
 unix domain sockets: very fast but im having trouble forcing ai2 "the executioner" to shut up and work as a team.
 directly starting a model inside of a model: this has the most potential but does not word directly, 
 I have a python script written by grok ai that starts a manager ai who starts 4 executioners.
-I have some work to do before I post all my new configs but getting there. 
+I have some work to do before I post all my new configs but getting there.  
 </h3>
-
+  
+  
+  
 <h3 align="center">!!! UNTIL THIS DISCLAIMER IS REMOVED, THESE SCRIPTS WILL LIKELY PRODUCE ERRORS !!!</h3>
-
+  
+  
+  
 <h3 align="center">
 Solitude is designed for linux power users that require the isolated security model of Qubes os who prefer the cli.
   
