@@ -1,7 +1,8 @@
 <h1 align="center">
   < SOLITUDE >
 </h1>
-</h2>
+
+</h2 align="center">
  Solitude is a project i began sometime in 2022-2023 when i really got into virtual machines.
  At that time I had no idea I was starting to build my own distro configuration.
  I had just transferred from tryhackme.com to hackthebox.com when i began to ponder the idea of
