@@ -143,8 +143,10 @@ then logout/in or reboot and run the install script. "This is neccessary for the
   
   
 <h3 align="center">INSTALL</h3>  
-```
   
+  
+  
+```  
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash  
 ```
   
