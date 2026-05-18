@@ -65,11 +65,6 @@ I have some work to do before I post all my new configs but getting there.
 </h3>
   
   
-  
-<h3 align="center">!!! UNTIL THIS DISCLAIMER IS REMOVED, THESE SCRIPTS WILL LIKELY PRODUCE ERRORS !!!</h3>
-  
-  
-  
 <h3 align="center">
 Solitude is designed for linux power users who require the isolated security model of Qubes os but prefer the cli.
   
@@ -87,7 +82,7 @@ Ssh connections should only be possible from host > vm and/or vm <> vm if needed
 </h3>  
   
   
-  
+<h3 align="center">!!! UNTIL THIS DISCLAIMER IS REMOVED, THESE SCRIPTS WILL LIKELY PRODUCE ERRORS !!!</h3>  
   
 <h2 align="center">INSTALLATION</h2>  
   <br>
