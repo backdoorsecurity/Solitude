@@ -85,20 +85,18 @@ making advanced security measures efficient and seamless.
 Ideally all communication should be done through ssh. Be sure to set up ssh host keys and disable password auth.
 
 Ssh connections should only be possible from host > vm and/or vm <> vm if needed, never vm > host.
-</h3>
-
-
+</h3>  
   
   
-<h1 align="center">  
-|-------------------------------------------------|  
-</h1>  
   
-<h2 align="center">INSTALLATION</h2>
+  
+<h2 align="center">INSTALLATION</h2>  
+  
+  
   
 <h1 align="center">  
 |-------------HOST OPERATING SYSTEM---------------|
-</h1>
+</h1>  
 * I will be making a separate detailed how to on installing the host for maximum performance and stability.
   
 As debian does not ship with sway wm, the preferred method is to skip installing a display manager during initial install.
