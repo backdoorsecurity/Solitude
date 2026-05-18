@@ -46,12 +46,8 @@ Upon initial install of the host operating system, reboot into system. As root:
 ``` text
 apt install sudo -y && usermod -aG sudo $USER
 ```
-then logout/in or reboot and run the install script. "This is neccessary for the script to work, i am working on an updated script which does not require sudo.
-
-
-
-
-
+then logout/in or reboot and run the install script. "This is neccessary for the script to work, i am working on an updated script which does not require sudo.  
+  
 ### Hotkey map:
 
 `alt+a,s,d,f,g:   workspaces 1-5`
@@ -74,9 +70,9 @@ then logout/in or reboot and run the install script. "This is neccessary for the
 
 `alt+"numpad1":   airgapped mode: host<x>internet vm's <x> internet host <> vm's <> vm's`
 
-`these can be changed in ~/.config/sway/config and ~/.config/sway/keybindings`
-
-
+`these can be changed in ~/.config/sway/config and ~/.config/sway/keybindings`  
+  
+  
 ### install
 ```
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash
@@ -99,8 +95,9 @@ You now have a template for the browser vm.
 
 I have recently switched to systemd-networkd in the network vm. I will be adding a prompt in the script allowing the user to select the old /etc/network/interfaces or systemd-networkd. "I have had issues with the old network convention".
 
-Depending on your security needs snort3 can also be run in inline/bridged ips mode between the physical and veth ifaces, I will be adding scripts and configs to set this up in the future.
-
+Depending on your security needs snort3 can also be run in inline/bridged ips mode between the physical and veth ifaces, I will be adding scripts and configs to set this up in the future.  
+  
+  
 ### install
 ```
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/network-vm/install.sh | bash
@@ -138,8 +135,9 @@ You can verify acceleration by entering
 ```text
 brave://gpu
 ```
-in url bar.
-
+in url bar.  
+  
+  
 ### install
 ```
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/browser-vm/install.sh | bash
