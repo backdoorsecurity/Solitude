@@ -91,7 +91,7 @@ Ssh connections should only be possible from host > vm and/or vm <> vm if needed
   
   
 <h2 align="center">INSTALLATION</h2>  
-  
+  <br>
   
   
 <h1 align="center">  
@@ -160,8 +160,8 @@ curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host
   
   <br>
   <br>
-  <br>
-  <br>
+  
+  
   
 <h1 align="center">|----------------------- NETWORK VM -----------------------|</h1>  
   
@@ -191,12 +191,7 @@ Depending on your security needs snort3 can also be run in inline/bridged ips mo
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/network-vm/install.sh | bash  
 ```
   
-  
-  
-  
-  
-  
-  
+  <br>  
   
 <h1 align="center">|----------------------- BROWSER VM -----------------------|</h1>  
   
