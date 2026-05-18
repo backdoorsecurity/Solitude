@@ -32,11 +32,15 @@ so computers are kinda my jam, and Im hoping this project will shoot me into the
 </h3>
   
 <h3 align="center">
-Im building different types of ai pentesting teams. message file: slow and prone to error.
-named pipes: worked decent but the models would jam the pipe. restart. 
-unix domain sockets: very fast but im having trouble forcing ai2 "the executioner" to shut up and work as a team.
-directly starting a model inside of a model: this has the most potential but does not word directly, 
-I have a python script written by grok ai that starts a manager ai who starts 4 executioners.
+Im building different types of ai pentesting teams. message file: slow and prone to error.  
+  
+named pipes: worked decent but the models would jam the pipe. restart.  
+  
+unix domain sockets: very fast but im having trouble forcing ai2 "the executioner" to shut up and work as a team.  
+  
+directly starting a model inside of a model: this has the most potential but does not work directly,  
+I have a python script written by grok ai that starts a manager ai who starts 4 executioners.  
+  
 I have some work to do before I post all my new configs but getting there.  
 </h3>
   
