@@ -110,7 +110,7 @@ curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/netw
 
 ### Solitude browser vm:
 
-With the massive attack surface a web browser presents I have built an extremely restrictive firejail sandbox profile in ~/.config/firejail/brave.
+With the massive attack surface a web browser presents I have built extremely restrictive firejail sandbox profiles in ~/.config/firejail/brave.
 
 My browser start script is optimized for chrome based browsers. Specifically brave-browser.
 
@@ -124,7 +124,8 @@ Make sure to add user paths in /home which should not be accessible by the web b
 ~/.config/firejail/brave/blacklists/home.db
 ```
 
-You can check accessible directories my entering```text
+You can check accessible directories my entering
+```text
 file:///
 ```
 into url bar and exploring your filesystem as the browser can.
