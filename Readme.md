@@ -172,15 +172,19 @@ I have recently switched to systemd-networkd in the network vm. I will be adding
 Depending on your security needs snort3 can also be run in inline/bridged ips mode between the physical and veth ifaces, I will be adding scripts and configs to set this up in the future.  
   
   
-<h3 align="center">INSTALL</h3>
+  
+<h3 align="center">INSTALL</h3>  
+  
+  
+  
 ```
-curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/network-vm/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/network-vm/install.sh | bash  
 ```
   
   
   
-<h3 align="center">BROWSER VM:</h3>
-
+<h3 align="center">BROWSER VM:</h3>  
+  
 With the massive attack surface a web browser presents I have built extremely restrictive firejail sandbox profiles in ~/.config/firejail/brave.
 
 My browser start script is optimized for chrome based browsers. Specifically brave-browser.
