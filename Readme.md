@@ -2,7 +2,7 @@
   < SOLITUDE >
 </h1>
 
-<h3 align="center">
+<h4 align="center">
 Solitude is a project i began sometime in 2022-2023 when i really got into virtual machines.
 At that time I had no idea I was starting to build my own distro configuration.  
   
@@ -32,9 +32,9 @@ unix domain sockets: very fast but im having trouble forcing ai2 "the executione
 directly starting a model inside of a model: this has the most potential but does not word directly, 
 I have a python script written by grok ai that starts a manager ai who starts 4 executioners.
 I have some work to do before I post all my new configs but getting there. 
-</h3>
+</h4>
 
-<h2 align="center">!!! UNTIL THIS DISCLAIMER IS REMOVED, THESE SCRIPTS WILL LIKELY PRODUCE ERRORS !!!</h2>
+<h3 align="center">!!! UNTIL THIS DISCLAIMER IS REMOVED, THESE SCRIPTS WILL LIKELY PRODUCE ERRORS !!!</h3>
 
 Solitude is designed for linux power users that require the isolated security model of Qubes os who prefer the cli.
   
