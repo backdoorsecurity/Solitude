@@ -142,16 +142,16 @@ then logout/in or reboot and run the install script. "This is neccessary for the
   
   
   
-<h3 align="center">INSTALL</h3>
-```  
+<h3 align="center">INSTALL</h3>  
+```
   
-curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash  
 ```
   
   
   
-<h3 align="center">NETWORK VM:</h3>
-
+<h3 align="center">NETWORK VM:</h3>  
+  
 After host setup is complete, install a minimal debian virtual machine in virt-manager. only needs ~20GB. You may want more if you intend to install snort3 or other large security programs.
   
 It would be wise to pass your wireless and/or ethernet card through to the vm rather than use the host's virtual ethernet, this will auto populate your wireless/ethernet network configs. 
