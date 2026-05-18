@@ -9,9 +9,12 @@ model of Qubes os but prefer the cli.
 This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative  
 host and vm's. Your hardware must support pci passthrough.  
 Using Sway wm and KVM/QEMU virtualization, this replaces the Qubes Xen Model with a simpler, much lighter stack.  
-
-The system utilizes a minimal lightweight browser and network vm. Emphasizing isolation through compartmentalization,  
+  
+  
+The system utilizes a minimal lightweight browser and network vm. Emphasizing isolation through compartmentalization,
 making advanced security measures efficient and seamless.  
+  
+  
 Ideally all communication should be done through ssh. Be sure to set up ssh host keys and disable password auth.  
 Ssh connections should only be possible from host > vm and/or vm <> vm if needed, never vm > host.
 </h1>
