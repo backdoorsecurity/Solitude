@@ -172,7 +172,7 @@ Depending on your security needs snort3 can also be run in inline/bridged ips mo
 <h3 align="center">INSTALL</h3>
 ```
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/network-vm/install.sh | bash
-```  
+```
   
   
   
@@ -183,6 +183,7 @@ With the massive attack surface a web browser presents I have built extremely re
 My browser start script is optimized for chrome based browsers. Specifically brave-browser.
 
 My firejail configs will work for any chrome based browsers with miminal tweaks to the blacklisting files located in
+  
 ```text
 ~.config/firejail/brave/blacklistings`
 ```
