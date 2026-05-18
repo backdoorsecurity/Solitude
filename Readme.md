@@ -16,7 +16,8 @@ The system utilizes a minimal lightweight browser and network vm. Emphasizing is
 making advanced security measures efficient and seamless.  
   
   
-Ideally all communication should be done through ssh. Be sure to set up ssh host  
+Ideally all communication should be done through ssh. Be sure to set up ssh host
+
 keys and disable password auth Ssh connections should only be possible from 
 host > vm and/or vm <> vm if needed, never vm > host.
 </h1>
