@@ -162,7 +162,6 @@ curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host
   <br>
   
   
-  
 <h1 align="center">|----------------------- NETWORK VM -----------------------|</h1>  
   
 After host setup is complete, install a minimal debian virtual machine in virt-manager. only needs ~20GB. You may want more if you intend to install snort3 or other large security programs.
@@ -191,10 +190,10 @@ Depending on your security needs snort3 can also be run in inline/bridged ips mo
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/network-vm/install.sh | bash  
 ```
   
-  <br>  
-  
-<h1 align="center">|----------------------- BROWSER VM -----------------------|</h1>  
-  
+<br>
+<br>
+<h1 align="center">|----------------------- BROWSER VM -----------------------|</h1>
+<br>
 With the massive attack surface a web browser presents I have built extremely restrictive firejail sandbox profiles in ~/.config/firejail/brave.
 
 My browser start script is optimized for chrome based browsers. Specifically brave-browser.
