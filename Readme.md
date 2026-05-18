@@ -2,6 +2,21 @@
   < SOLITUDE >
 </h1>
 
+
+<h3 align="center">
+Solitude is an operating system configuration, designed for linux power users who require the isolated security  
+model of Qubes os but prefer the cli.  
+This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative  
+host and vm's. Your hardware must support pci passthrough.  
+Using Sway wm and KVM/QEMU virtualization, this replaces the Qubes Xen Model with a simpler, much lighter stack.  
+
+The system utilizes a minimal lightweight browser and network vm. Emphasizing isolation through compartmentalization,  
+making advanced security measures efficient and seamless.  
+Ideally all communication should be done through ssh. Be sure to set up ssh host keys and disable password auth.  
+Ssh connections should only be possible from host > vm and/or vm <> vm if needed, never vm > host.
+</h1>
+
+
 <h3 align="center">
 Solitude is a project i began sometime in 2022-2023 when i really got into virtual machines.
 At that time I had no idea I was starting to build my own distro configuration.  
@@ -51,16 +66,17 @@ I have some work to do before I post all my new configs but getting there.
   
   
 <h3 align="center">
-Solitude is designed for linux power users that require the isolated security model of Qubes os who prefer the cli.
+Solitude is designed for linux power users who require the isolated security model of Qubes os but prefer the cli.
   
-This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative host and vm's.
-Your hardware must support pci passthrough.
+This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative 
+host and vm's. Your hardware must support pci passthrough.
   
 Using Sway wm and KVM/QEMU virtualization, this replaces the Qubes Xen Model with a simpler, much lighter stack.
 
-The system utilizes a minimal lightweight browser and network vm. Emphasizing isolation through compartmentalization, making advanced security measures efficient and seamless.
+The system utilizes a minimal lightweight browser and network vm. Emphasizing isolation through compartmentalization, 
+making advanced security measures efficient and seamless.
   
-Ideally all communication should be done through ssh. Be sure to set up ssh host keys and disable password authentication.
+Ideally all communication should be done through ssh. Be sure to set up ssh host keys and disable password auth.
 
 Ssh connections should only be possible from host > vm and/or vm <> vm if needed, never vm > host.
 </h3>
