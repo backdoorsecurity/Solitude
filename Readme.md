@@ -158,12 +158,10 @@ then logout/in or reboot and run the install script. "This is neccessary for the
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash  
 ```
   
-  
-  
-  
-  
-  
-  
+  <br>
+  <br>
+  <br>
+  <br>
   
 <h1 align="center">|----------------------- NETWORK VM -----------------------|</h1>  
   
