@@ -88,9 +88,9 @@ Ssh connections should only be possible from host > vm and/or vm <> vm if needed
 </h3>
 
 
-<h3 align="center">Installation</h3>
+<h3 align="center">INSTALLATION</h3>
 
-<h3 align="center">Host operating system:</h3>
+<h3 align="center">HOST OPERATING SYSTEM:</h3>
 * I will be making a separate detailed how to on installing the host for maximum performance and stability.
   
 As debian does not ship with sway wm, the preferred method is to skip installing a display manager during initial install.
@@ -116,7 +116,7 @@ apt install sudo -y && usermod -aG sudo $USER
 ```
 then logout/in or reboot and run the install script. "This is neccessary for the script to work, i am working on an updated script which does not require sudo.  
   
-<h3 align="center">Hotkey map:</h3>
+<h3 align="center">HOTKEY MAP:</h3>
 
 `alt+a,s,d,f,g:   workspaces 1-5`
 
@@ -142,14 +142,14 @@ then logout/in or reboot and run the install script. "This is neccessary for the
   
   
   
-<h3 align="center">install</h3>
+<h3 align="center">INSTALL</h3>
 ```
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash
 ```
   
   
   
-<h3 align="center">Solitude network vm:</h3>
+<h3 align="center">NETWORK VM:</h3>
 
 After host setup is complete, install a minimal debian virtual machine in virt-manager. only needs ~20GB. You may want more if you intend to install snort3 or other large security programs.
   
@@ -169,14 +169,14 @@ I have recently switched to systemd-networkd in the network vm. I will be adding
 Depending on your security needs snort3 can also be run in inline/bridged ips mode between the physical and veth ifaces, I will be adding scripts and configs to set this up in the future.  
   
   
-<h3 align="center">install</h3>
+<h3 align="center">INSTALL</h3>
 ```
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/network-vm/install.sh | bash
 ```
   
   
   
-<h3 align="center">Solitude browser vm:</h3>
+<h3 align="center">BROWSER VM:</h3>
 
 With the massive attack surface a web browser presents I have built extremely restrictive firejail sandbox profiles in ~/.config/firejail/brave.
 
@@ -214,7 +214,7 @@ in url bar.
   
   
   
-<h4 align="center">install</h4>
+<h4 align="center">INSTALL</h4>
 ```
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/browser-vm/install.sh | bash
 ```
@@ -222,26 +222,27 @@ curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/brow
   
   
   
-##### Solitude is a project i began sometime in 2022-2023 when i really got into virtual machines.
-##### At that time I had no idea I was starting to build my own distro configuration.
-##### I had just transferred from tryhackme.com to hackthebox.com when i began to ponder the idea of
-##### setting up a team of ai pentesters.
-##### I had heard of people doing it but I had never seen it.
-##### I just didn't like the thought of running ai directly on my hardware.
-##### At the time i was using my Lenovo P52, after almost a year of trying to pass through the nvidia gpu to a vm
-##### I had a random idea of trying my legion 5 pro. Installed Debian,
-##### set the kernel parameters to enable passthrough and unbound the gpu from the host's iommu group. 
-##### Installed drivers in the vm and had achieved full gpu passthrough.
-##### The legion 5 pro uses a muxed graphics switch which makes passthrough a breeze.
-##### At that time I had no idea I was starting to build my own distro configuration.
-##### I knew when I started my business I was either going to be a successful mechanic or I was going to spend a lot of >
-##### Been on my own for about 2 years now. Worked an average of 1-2 days a week.
-##### Kinda sucks being slow and having to live a minimalist lifestyle but I just cant work for any more idiots.
-##### so computers are kinda my jam, and Im hoping this project will shoot me into the tech industry.
+<h2 align="center">NETWORK MAP</h2>
 
-##### Im building different types of ai pentesting teams. message file: slow and prone to error.
-##### named pipes: worked decent but the models would jam the pipe. restart. 
-##### unix domain sockets: very fast but im having trouble forcing ai2 "the executioner" to shut up and work as a team.
-##### directly starting a model inside of a model: this has the most potential but does not word directly, 
-##### I have a python script written by grok ai that starts a manager ai who starts 4 executioners.
-##### I have some work to do before I post all my new configs but getting there.
+<h3 align="center">
+                       ------------------------
+                       | HOST OPERATING SYSTEM |
+                       -------------------------  
+</h3>
+<h3 align="left">
+BROWSER VM  
+</h3>
+<h3 align="right">
+NETWORK VM  
+</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+VM1       VM2         VM3         VM4
+
+</h3>
