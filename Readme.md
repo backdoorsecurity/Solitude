@@ -3,30 +3,33 @@
 </h1>
 
 <h3 align="center">
- Solitude is a project i began sometime in 2022-2023 when i really got into virtual machines.
- At that time I had no idea I was starting to build my own distro configuration.  
+Solitude is a project i began sometime in 2022-2023 when i really got into virtual machines.
+At that time I had no idea I was starting to build my own distro configuration.  
   
- I had just transferred from tryhackme.com to hackthebox.com when i began to ponder the idea of
- setting up a team of ai pentesters.
- I had heard of people doing it but I had never seen it.
- I just didn't like the thought of running ai directly on my hardware.
- At the time i was using my Lenovo P52, after almost a year of trying to pass through the nvidia gpu to a vm
- I had a random idea of trying my legion 5 pro. Installed Debian,
- set the kernel parameters to enable passthrough and unbound the gpu from the host's iommu group. 
- Installed drivers in the vm and had achieved full gpu passthrough.
- The legion 5 pro uses a muxed graphics switch which makes passthrough a breeze.
- At that time I had no idea I was starting to build my own distro configuration.
- I knew when I started my business I was either going to be a successful mechanic or I was going to spend a lot of time on my computer.
- Been on my own for about 2 years now. Worked an average of 1-2 days a week.
- Kinda sucks being slow and having to live a minimalist lifestyle but I just cant work for any more idiots.
- so computers are kinda my jam, and Im hoping this project will shoot me into the tech industry.
+  
+I had just transferred from tryhackme.com to hackthebox.com when i began to ponder the idea of
+setting up a team of ai pentesters.
+I had heard of people doing it but I had never seen it.
+I just didn't like the thought of running ai directly on my hardware.
+  
+  
+  
+At the time i was using my Lenovo P52, after almost a year of trying to pass through the nvidia gpu to a vm
+I had a random idea of trying my legion 5 pro. Installed Debian,
+set the kernel parameters to enable passthrough and unbound the gpu from the host's iommu group. 
+Installed drivers in the vm and had achieved full gpu passthrough.
+The legion 5 pro uses a muxed graphics switch which makes passthrough a breeze.
+At that time I had no idea I was starting to build my own distro configuration.
+I knew when I started my business I was either going to be a successful mechanic or I was going to spend a lot of time on my computer. Been on my own for about 2 years now. Worked an average of 1-2 days a week.
+Kinda sucks being slow and having to live a minimalist lifestyle but I just cant work for any more idiots.
+so computers are kinda my jam, and Im hoping this project will shoot me into the tech industry.
 
- Im building different types of ai pentesting teams. message file: slow and prone to error.
- named pipes: worked decent but the models would jam the pipe. restart. 
- unix domain sockets: very fast but im having trouble forcing ai2 "the executioner" to shut up and work as a team.
- directly starting a model inside of a model: this has the most potential but does not word directly, 
- I have a python script written by grok ai that starts a manager ai who starts 4 executioners.
- I have some work to do before I post all my new configs but getting there. 
+Im building different types of ai pentesting teams. message file: slow and prone to error.
+named pipes: worked decent but the models would jam the pipe. restart. 
+unix domain sockets: very fast but im having trouble forcing ai2 "the executioner" to shut up and work as a team.
+directly starting a model inside of a model: this has the most potential but does not word directly, 
+I have a python script written by grok ai that starts a manager ai who starts 4 executioners.
+I have some work to do before I post all my new configs but getting there. 
 </h3>
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !!! UNTIL THIS DISCLAIMER IS REMOVED, THESE SCRIPTS WILL LIKELY PRODUCE ERRORS !!!
