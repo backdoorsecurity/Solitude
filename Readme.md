@@ -88,9 +88,9 @@ Ssh connections should only be possible from host > vm and/or vm <> vm if needed
 </h3>
 
 
-<h3 align="center">INSTALLATION</h3>
+<h1 align="center">INSTALLATION</h1>
 
-<h3 align="center">HOST OPERATING SYSTEM:</h3>
+<h1 align="center">HOST OPERATING SYSTEM:</h1>
 * I will be making a separate detailed how to on installing the host for maximum performance and stability.
   
 As debian does not ship with sway wm, the preferred method is to skip installing a display manager during initial install.
@@ -116,7 +116,7 @@ apt install sudo -y && usermod -aG sudo $USER
 ```
 then logout/in or reboot and run the install script. "This is neccessary for the script to work, i am working on an updated script which does not require sudo.  
   
-<h3 align="center">HOTKEY MAP:</h3>
+<h2 align="center">HOTKEY MAP:</h2>
 
 `alt+a,s,d,f,g:   workspaces 1-5`
 
@@ -152,7 +152,7 @@ curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host
   
   
   
-<h3 align="center">NETWORK VM:</h3>  
+<h1 align="center">NETWORK VM:</h1>  
   
 After host setup is complete, install a minimal debian virtual machine in virt-manager. only needs ~20GB. You may want more if you intend to install snort3 or other large security programs.
   
@@ -183,7 +183,7 @@ curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/netw
   
   
   
-<h3 align="center">BROWSER VM:</h3>  
+<h1 align="center">BROWSER VM:</h1>  
   
 With the massive attack surface a web browser presents I have built extremely restrictive firejail sandbox profiles in ~/.config/firejail/brave.
 
