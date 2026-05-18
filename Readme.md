@@ -4,7 +4,8 @@
 
 <h3 align="center">
  Solitude is a project i began sometime in 2022-2023 when i really got into virtual machines.
- At that time I had no idea I was starting to build my own distro configuration.
+ At that time I had no idea I was starting to build my own distro configuration.  
+  
  I had just transferred from tryhackme.com to hackthebox.com when i began to ponder the idea of
  setting up a team of ai pentesters.
  I had heard of people doing it but I had never seen it.
