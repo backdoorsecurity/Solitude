@@ -1,6 +1,6 @@
-# <div align="center">
+<h1 align="center">
 < SOLITUDE >
-</dev>
+</h1>
 ##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A BADASS OPERATING SYSTEM CONFIGURATION. BUILT BY A LINUX JUNKIE, FOR LINUX JUNKIES.
 
 
