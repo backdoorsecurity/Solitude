@@ -2,44 +2,44 @@
   < SOLITUDE >
 </h1>
 
-<h4 align="center">
+<h3 align="center">
 Solitude is a project i began sometime in 2022-2023 when i really got into virtual machines.
 At that time I had no idea I was starting to build my own distro configuration.  
-</h4>
+</h3>
   
-<h4 align="center">
+<h3 align="center">
 I had just transferred from tryhackme.com to hackthebox.com when i began to ponder the idea of
 setting up a team of ai pentesters.
 I had heard of people doing it but I had never seen it.
 I just didn't like the thought of running ai directly on my hardware.
-</h4>
+</h3>
   
-<h4 align="center">
+<h3 align="center">
 At the time i was using my Lenovo P52, which after almost a year of trying to pass through the nvidia gpu
 to a vm I had the random idea of trying my legion 5 pro with a muxed graphics switch. Installed Debian, 
 set the kernel parameters to enable passthrough and unbound the gpu from the host's iommu group, 
 Installed drivers in the vm and had achieved full gpu passthrough.  
-</h4>
+</h3>
   
-<h4 align="center">
+<h3 align="center">
 At that time I had no idea I was starting to build my own distro configuration.
 I knew when I started my business I was either going to be a successful mechanic or I was going to spend a lot of time on my computer. Been on my own for about 2 years now. Worked an average of 1-2 days a week.
 Kinda sucks being slow and having to live a minimalist lifestyle but I just cant work for any more idiots.
 so computers are kinda my jam, and Im hoping this project will shoot me into the tech industry.
-</h4>
+</h3>
   
-<h4 align="center">
+<h3 align="center">
 Im building different types of ai pentesting teams. message file: slow and prone to error.
 named pipes: worked decent but the models would jam the pipe. restart. 
 unix domain sockets: very fast but im having trouble forcing ai2 "the executioner" to shut up and work as a team.
 directly starting a model inside of a model: this has the most potential but does not word directly, 
 I have a python script written by grok ai that starts a manager ai who starts 4 executioners.
 I have some work to do before I post all my new configs but getting there. 
-</h4>
+</h3>
 
 <h3 align="center">!!! UNTIL THIS DISCLAIMER IS REMOVED, THESE SCRIPTS WILL LIKELY PRODUCE ERRORS !!!</h3>
 
-<h4 align="center">
+<h3 align="center">
 Solitude is designed for linux power users that require the isolated security model of Qubes os who prefer the cli.
   
 This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative host and vm's.
@@ -52,12 +52,12 @@ The system utilizes a minimal lightweight browser and network vm. Emphasizing is
 Ideally all communication should be done through ssh. Be sure to set up ssh host keys and disable password authentication.
 
 Ssh connections should only be possible from host > vm and/or vm <> vm if needed, never vm > host.
-</h4>
+</h3>
 
 
-<h4 align="center">Installation</h4>
+<h3 align="center">Installation</h3>
 
-<h4 align="center">Host operating system:</h4>
+<h3 align="center">Host operating system:</h3>
 * I will be making a separate detailed how to on installing the host for maximum performance and stability.
   
 As debian does not ship with sway wm, the preferred method is to skip installing a display manager during initial install.
@@ -83,7 +83,7 @@ apt install sudo -y && usermod -aG sudo $USER
 ```
 then logout/in or reboot and run the install script. "This is neccessary for the script to work, i am working on an updated script which does not require sudo.  
   
-<h4 align="center">Hotkey map:</h4>
+<h3 align="center">Hotkey map:</h3>
 
 `alt+a,s,d,f,g:   workspaces 1-5`
 
@@ -109,14 +109,14 @@ then logout/in or reboot and run the install script. "This is neccessary for the
   
   
   
-<h4 align="center">install</h4>
+<h3 align="center">install</h3>
 ```
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash
 ```
   
   
   
-<h4 align="center">Solitude network vm:</h4>
+<h3 align="center">Solitude network vm:</h3>
 
 After host setup is complete, install a minimal debian virtual machine in virt-manager. only needs ~20GB. You may want more if you intend to install snort3 or other large security programs.
   
@@ -136,14 +136,14 @@ I have recently switched to systemd-networkd in the network vm. I will be adding
 Depending on your security needs snort3 can also be run in inline/bridged ips mode between the physical and veth ifaces, I will be adding scripts and configs to set this up in the future.  
   
   
-<h4 align="center">install</h4>
+<h3 align="center">install</h3>
 ```
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/network-vm/install.sh | bash
 ```
   
   
   
-<h4 align="center">Solitude browser vm:</h4>
+<h3 align="center">Solitude browser vm:</h3>
 
 With the massive attack surface a web browser presents I have built extremely restrictive firejail sandbox profiles in ~/.config/firejail/brave.
 
