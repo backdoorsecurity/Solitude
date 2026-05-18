@@ -214,7 +214,9 @@ in url bar.
   
   
   
-<h4 align="center">INSTALL</h4>
+<h4 align="center">INSTALL</h4>  
+  
+
 ```
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/browser-vm/install.sh | bash
 ```  
