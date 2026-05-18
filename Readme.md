@@ -44,7 +44,7 @@ Installed drivers in the vm and had achieved full gpu passthrough.
   
 <h3 align="center">
 At that time I had no idea I was starting to build my own distro configuration.
-I knew when I started my business I was either going to be a successful mechanic or I was going to spend a lot of time on my computer. Been on my own for about 2 years now. Worked an average of 1-2 days a week.
+I knew when I started my business I was either going to be a successful mechanic or I was going to spend a lot of time on my computer. Ended up being the latter.
 Kinda sucks being slow and having to live a minimalist lifestyle but I just cant work for any more idiots.  
 </h3>
   
@@ -57,10 +57,9 @@ Im building different types of ai pentesting teams. message file: slow and prone
   
 named pipes: worked decent but the models would jam the pipe. restart.  
   
-unix domain sockets: very fast but im having trouble forcing ai2 "the executioner" to shut up and work as a team.  
+unix domain sockets: very fast and effective.  
   
 directly starting a model inside of a model: this has the most potential but does not work directly,  
-I have a python script written by grok ai that starts a manager ai who starts 4 executioners.  
   
 I have some work to do before I post all my new configs but getting there.  
 </h3>
@@ -240,27 +239,8 @@ curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/brow
   
   
   
-<h1 align="center">|------------NETWORK MAP------------|</h1>
-
-<h3 align="center">
-                       ------------------------
-                       | HOST OPERATING SYSTEM |
-                       -------------------------  
-</h3>
-<h3 align="left">
-BROWSER VM  
-</h3>
-<h3 align="right">
-NETWORK VM  
-</h3>
+<h1 align="center">|------------NETWORK MAP------------|</h1>  
   
   
   
-  
-  
-  
-  
-  
-VM1       VM2         VM3         VM4
-
-</h3>
+  <h2 align="center"> UNDER CONSTRUCTION</h2>
