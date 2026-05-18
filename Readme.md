@@ -36,6 +36,7 @@ I have some work to do before I post all my new configs but getting there.
 
 <h3 align="center">!!! UNTIL THIS DISCLAIMER IS REMOVED, THESE SCRIPTS WILL LIKELY PRODUCE ERRORS !!!</h3>
 
+<h2 align="center">
 Solitude is designed for linux power users that require the isolated security model of Qubes os who prefer the cli.
   
 This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative host and vm's.
@@ -48,12 +49,12 @@ The system utilizes a minimal lightweight browser and network vm. Emphasizing is
 Ideally all communication should be done through ssh. Be sure to set up ssh host keys and disable password authentication.
 
 Ssh connections should only be possible from host > vm and/or vm <> vm if needed, never vm > host.
+</h2>
 
 
+<h4 align="center">Installation</h4>
 
-## Installation
-
-### Host operating system:
+<h4 align="center">Host operating system:</h4>
 * I will be making a separate detailed how to on installing the host for maximum performance and stability.
   
 As debian does not ship with sway wm, the preferred method is to skip installing a display manager during initial install.
@@ -79,7 +80,7 @@ apt install sudo -y && usermod -aG sudo $USER
 ```
 then logout/in or reboot and run the install script. "This is neccessary for the script to work, i am working on an updated script which does not require sudo.  
   
-### Hotkey map:
+<h4 align="center">Hotkey map:</h4>
 
 `alt+a,s,d,f,g:   workspaces 1-5`
 
@@ -105,14 +106,14 @@ then logout/in or reboot and run the install script. "This is neccessary for the
   
   
   
-### install
+<h4 align="center">install</h4>
 ```
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/host-os/install.sh | bash
 ```
   
   
   
-### Solitude network vm:
+<h4 align="center">Solitude network vm:</h4>
 
 After host setup is complete, install a minimal debian virtual machine in virt-manager. only needs ~20GB. You may want more if you intend to install snort3 or other large security programs.
   
@@ -132,14 +133,14 @@ I have recently switched to systemd-networkd in the network vm. I will be adding
 Depending on your security needs snort3 can also be run in inline/bridged ips mode between the physical and veth ifaces, I will be adding scripts and configs to set this up in the future.  
   
   
-### install
+<h4 align="center">install</h4>
 ```
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/network-vm/install.sh | bash
 ```
   
   
   
-### Solitude browser vm:
+<h4 align="center">Solitude browser vm:</h4>
 
 With the massive attack surface a web browser presents I have built extremely restrictive firejail sandbox profiles in ~/.config/firejail/brave.
 
@@ -177,7 +178,7 @@ in url bar.
   
   
   
-### install
+<h4 align="center">install</h4>
 ```
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/browser-vm/install.sh | bash
 ```
