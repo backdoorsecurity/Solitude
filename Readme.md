@@ -91,8 +91,10 @@ Ssh connections should only be possible from host > vm and/or vm <> vm if needed
 <h2 align="center">INSTALLATION</h2>
   
 <h1 align="center">
-|-------------HOST OPERATING SYSTEM---------------|
 |-------------------------------------------------|
+</h1>
+<h1 align="center">
+|-------------HOST OPERATING SYSTEM---------------|
 </h1>
 * I will be making a separate detailed how to on installing the host for maximum performance and stability.
   
