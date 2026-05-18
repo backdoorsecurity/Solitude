@@ -39,7 +39,7 @@ I have some work to do before I post all my new configs but getting there.
 
 <h3 align="center">!!! UNTIL THIS DISCLAIMER IS REMOVED, THESE SCRIPTS WILL LIKELY PRODUCE ERRORS !!!</h3>
 
-<h2 align="center">
+<h4 align="center">
 Solitude is designed for linux power users that require the isolated security model of Qubes os who prefer the cli.
   
 This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative host and vm's.
@@ -52,7 +52,7 @@ The system utilizes a minimal lightweight browser and network vm. Emphasizing is
 Ideally all communication should be done through ssh. Be sure to set up ssh host keys and disable password authentication.
 
 Ssh connections should only be possible from host > vm and/or vm <> vm if needed, never vm > host.
-</h2>
+</h4>
 
 
 <h4 align="center">Installation</h4>
