@@ -172,7 +172,7 @@ Depending on your security needs snort3 can also be run in inline/bridged ips mo
 <h3 align="center">INSTALL</h3>
 ```
 curl -fsSL https://raw.githubusercontent.com/backdoorsecurity/Solitude/main/network-vm/install.sh | bash
-```
+```  
   
   
   
