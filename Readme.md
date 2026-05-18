@@ -5,14 +5,14 @@
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; !!! UNTIL THIS DISCLAIMER IS REMOVED, THESE SCRIPTS WILL LIKELY PRODUCE ERRORS !!!
 
-Solitude is designed for linux power users that require the isolated security model of Qubes os who prefer the cli over gui.
+Solitude is designed for linux power users that require the isolated security model of Qubes os who prefer the cli.
 
-This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative host and vm's. 
+This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative host and vm's.
 Your hardware must support pci passthrough.
 
-Featuring the Sway window manager with KVM/QEMU virtualization, it replaces Qubes Xen Model with a simpler, much lighter stack.
+Using Sway wm and KVM/QEMU virtualization, this replaces the Qubes Xen Model with a simpler, much lighter stack.
 
-The system employs a minimal lightweight browser and network vm. Emphasizing isolation through compartmentalization, making advanced security measures efficient and seamless.
+The system utilizes a minimal lightweight browser and network vm. Emphasizing isolation through compartmentalization, making advanced security measures efficient and seamless.
 
 Ideally all communication should be done through ssh. Be sure to set up ssh host keys and disable password authentication.
 
@@ -22,10 +22,10 @@ Ssh connections should only be possible from host > vm and/or vm <> vm if needed
 
 ## Installation
 
-### Solitude host operating system:
+### Host operating system:
 * I will be making a separate detailed how to on installing the host for maximum performance and stability.
 
-As debian does not ship with sway wm, the preferred method is to skip installing a display manager.
+As debian does not ship with sway wm, the preferred method is to skip installing a display manager during initial install.
 
 One catch is the command sudo and rfkill will not be installed. If you cannot connect to wifi network after install, execute:
 ```text
@@ -91,7 +91,7 @@ After host setup is complete, install a minimal debian virtual machine in virt-m
 It would be wise to pass your wireless and/or ethernet card through to the vm rather than use the host's virtual ethernet, this will auto populate your wireless/ethernet network configs. 
 The host install script automatically detects the pci ids and adds them to the vfio/iommu kernel parameters.
 
-To avoid unnecessary work "prior to running the install script" poweroff the network vm and:
+To avoid unnecessary work "prior to running the install script" poweroff the network vm and execute:
 ```text
 cp /var/lib/libvirt/images/network.qcow2 /var/lib/libvirt/images/browser.qcow2
 ```
@@ -118,13 +118,13 @@ My firejail configs will work for any chrome based browsers with miminal tweaks 
 ```text
 ~.config/firejail/brave/blacklistings`
 ```
-also make sure to add user paths in /home which should not be accessible by the web browser to:
+
+Make sure to add user paths in /home which should not be accessible by the web browser:
 ```text
 ~/.config/firejail/brave/blacklists/home.db
 ```
 
-You can check accessible directories my entering
-```text
+You can check accessible directories my entering```text
 file:///
 ```
 into url bar and exploring your filesystem as the browser can.
