@@ -14,16 +14,9 @@ replaces the Qubes Xen Model with a much lighter stack.
 this security model is known as "isolation through compartmentalization",  
 the most advanced computer security system on the planet.  
 <h3 align="center">  
-so anyway, enough 3AM rambling. Computers are kinda my jam, this system is still rough around the edges,  
-but... I really enjoy using it and it is only going to get better.
-</h3>  
-  
-  
-<h3 align="center">
-Ideally all communication should be done through ssh. Be sure to set up ssh host keys and disable password auth.  
-Ssh connections should only be allowed from
+Computers are kinda my jam, this system is still rough around the edges, but...
 
-host > vm and/or vm <> vm if needed, never vm > host.  
+I really enjoy using it and it is only going to get better.
 </h3>  
   
   
@@ -90,7 +83,12 @@ then logout/in or reboot and run the install script. "This is neccessary for the
 
 `these can be changed in ~/.config/sway/config and ~/.config/sway/keybindings`  
   
-  
+<h3 align="center">
+Ideally all inter-machine communication would be done through ssh. Be sure to set up ssh host keys and  
+disable password auth. Ssh connections should only be allowed from
+
+host > vm and/or vm <> vm if needed, never vm > host.  
+</h3>  
   
 <h3 align="center">INSTALL</h3>  
   
