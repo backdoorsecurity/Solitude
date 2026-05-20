@@ -6,11 +6,11 @@ The operating system for hermits who never get laid.
 </h2>  
 <h3 align="center">  
 Hello and welcome fellow linux users, I bring to you, an operating system configuration, designed for linux power  
-users who seek the isolated security model of Qubes os but prefer a light snappy cli. This is not a plug and play  
+users who seek the isolated security model of QubesOs but prefer a light snappy cli. This is not a plug and play  
 iso but rather a collection of scripts to be run on a fresh install of debian/derivative host/vm's.  
 For this configuration to work, your hardware must support pci passthrough.  
-Using Sway wm and KVM/QEMU virtualization, this replaces the Qubes Xen Model with a much lighter stack.  
-Featuring a minimal lightweight browser and network vm.  
+Featuring Sway wm and KVM/QEMU virtualization, a minimal lightweight browser and network vm. this  
+replaces the Qubes Xen Model with a much lighter stack.  
 this security model is known as "isolation through compartmentalization",  
 the most advanced computer security system on the planet.  
 <h3 align="center">  
@@ -21,7 +21,8 @@ but... I really enjoy using it and it is only going to get better.
   
 <h3 align="center">
 Ideally all communication should be done through ssh. Be sure to set up ssh host keys and disable password auth.  
-Ssh connections should only be allowed from host > vm and/or vm <> vm if needed, never vm > host.  
+Ssh connections should only be allowed from  
+  host > vm and/or vm <> vm if needed, never vm > host.  
 </h3>  
   
   
