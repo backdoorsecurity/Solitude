@@ -9,8 +9,8 @@ Hello and welcome fellow linux users, I bring to you, an operating system config
 users who seek the isolated security model of QubesOs but prefer a light snappy cli. This is not a plug and play  
 iso but rather a collection of scripts to be run on a fresh install of debian/derivative host/vm's.  
 For this configuration to work, your hardware must support pci passthrough.  
-Featuring Sway wm and KVM/QEMU virtualization, a minimal lightweight browser and network vm.
-
+Featuring Sway wm and KVM/QEMU virtualization, a minimal lightweight browser and network vm.  
+  
 This security model is known as "isolation through compartmentalization",   
 the most advanced computer security system on the planet.  
 Anyway, computers are kinda my jam, this system is still rough around the edges, but...  
