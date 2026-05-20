@@ -13,8 +13,8 @@ Featuring Sway wm and KVM/QEMU virtualization, a minimal lightweight browser and
   
 This security model is known as "isolation through compartmentalization",   
 the most advanced computer security system on the planet.  
-Anyway, computers are kinda my jam, this system is still rough around the edges, but...  
-I really enjoy using it and it is only going to get better.
+Anyway, computers are kinda my jam, this system is still rough around the edges,  
+  but... I really enjoy using it and it is only going to get better.
 </h3>  
   
   
