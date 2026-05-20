@@ -1,88 +1,33 @@
 <h1 align="center">
   <---------- SOLITUDE ---------->
 </h1>
-
-
-<h3 align="center">
-Solitude is an operating system configuration, designed for linux power users who require the isolated security  
-model of Qubes os but prefer the cli.  
-
-This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative
-host and vm's. Your hardware must support pci passthrough. Using Sway wm and KVM/QEMU virtualization,
-this replaces the Qubes Xen Model with a simpler, much lighter stack.  
-  
-  
-The system utilizes a minimal lightweight browser and network vm. Emphasizing isolation through compartmentalization,
-making advanced security measures efficient and seamless.  
-  
-  
-Ideally all communication should be done through ssh. Be sure to set up ssh host
-
-keys and disable password auth Ssh connections should only be possible from  
-  host > vm and/or vm <> vm if needed, never vm > host.
-</h1>
-
-
-<h3 align="center">
-Solitude is a project i began sometime in 2022-2023 when i really got into virtual machines.
-At that time I had no idea I was starting to build my own distro configuration.  
-</h3>
-  
-<h3 align="center">
-I had just transferred from tryhackme.com to hackthebox.com when i began to ponder the idea of
-setting up a team of ai pentesters.
-I had heard of people doing it but I had never seen it.
-I just didn't like the thought of running ai directly on my hardware.
-</h3>
-  
-<h3 align="center">
-At the time i was using my Lenovo P52, which after almost a year of trying to pass through the nvidia gpu
-to a vm I had the random idea of trying my legion 5 pro with a muxed graphics switch. Installed Debian, 
-set the kernel parameters to enable passthrough and unbound the gpu from the host's iommu group, 
-Installed drivers in the vm and had achieved full gpu passthrough.  
-</h3>
-  
-<h3 align="center">
-At that time I had no idea I was starting to build my own distro configuration.
-I knew when I started my business I was either going to be a successful mechanic or I was going to spend a lot of time on my computer. Ended up being the latter.
-Kinda sucks being slow and having to live a minimalist lifestyle but I just cant work for any more idiots.  
-</h3>
-  
-<h3 align="center">
-so computers are kinda my jam, and Im hoping this project will shoot me into the tech industry.
-</h3>
-  
-<h3 align="center">
-Im building different types of ai pentesting teams. message file: slow and prone to error.  
-  
-named pipes: worked decent but the models would jam the pipe. restart.  
-  
-unix domain sockets: very fast and effective.  
-  
-directly starting a model inside of a model: this has the most potential but does not work directly,  
-  
-I have some work to do before I post all my new configs but getting there.  
-</h3>
-  
-  
-<h3 align="center">
-Solitude is designed for linux power users who require the isolated security model of Qubes os but prefer the cli.
-  
-This is not a plug and play iso but rather a collection of scripts to be run on a fresh install of debian/derivative 
-host and vm's. Your hardware must support pci passthrough.
-  
-Using Sway wm and KVM/QEMU virtualization, this replaces the Qubes Xen Model with a simpler, much lighter stack.
-
-The system utilizes a minimal lightweight browser and network vm. Emphasizing isolation through compartmentalization, 
-making advanced security measures efficient and seamless.
-  
-Ideally all communication should be done through ssh. Be sure to set up ssh host keys and disable password auth.
-
-Ssh connections should only be possible from host > vm and/or vm <> vm if needed, never vm > host.  
+<h2 align="center">
+The operating system for hermits who never get laid.  
+</h2>  
+<h3 align="center">  
+Hello and welcome fellow linux users, I bring to you, an operating system configuration, designed for linux power  
+users who seek the isolated security model of Qubes os but prefer a light snappy cli. This is not a plug and play  
+iso but rather a collection of scripts to be run on a fresh install of debian/derivative host/vm's.  
+For this configuration to work, your hardware must support pci passthrough.  
+Using Sway wm and KVM/QEMU virtualization, this replaces the Qubes Xen Model with a much lighter stack.  
+Featuring a minimal lightweight browser and network vm.  
+this security model is known as "isolation through compartmentalization",  
+the most advanced computer security system on the planet.  
+<h3 align="center">  
+so anyway, enough 3AM rambling. Computers are kinda my jam, this system is still rough around the edges,  
+but... I really enjoy using it and it is only going to get better.
 </h3>  
   
   
-<h3 align="center">!!! UNTIL THIS DISCLAIMER IS REMOVED, THESE SCRIPTS WILL LIKELY PRODUCE ERRORS !!!</h3>  
+<h3 align="center">
+Ideally all communication should be done through ssh. Be sure to set up ssh host keys and disable password auth.  
+Ssh connections should only be allowed from host > vm and/or vm <> vm if needed, never vm > host.  
+</h3>  
+  
+  
+<h2 align="center">!!! UNTIL THIS DISCLAIMER IS REMOVED, THESE SCRIPTS WILL LIKELY PRODUCE ERRORS !!!  
+It would be wise to carefully read the scripts and check the config files before you install this on bare metal.
+</h2>  
   
 <h2 align="center">INSTALLATION</h2>  
   <br>
