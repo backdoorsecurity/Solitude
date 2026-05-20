@@ -18,9 +18,9 @@ Anyway, computers are kinda my jam, this system is still rough around the edges,
 </h3>  
   
   
-<h2 align="center">!!! UNTIL THIS DISCLAIMER IS REMOVED, THESE SCRIPTS WILL LIKELY PRODUCE ERRORS !!!  
+<h3 align="center">!!! UNTIL THIS DISCLAIMER IS REMOVED, THESE SCRIPTS WILL LIKELY PRODUCE ERRORS !!!  
 It would be wise to carefully read the scripts and check the config files before you install this on bare metal.
-</h2>  
+</h3>  
   
 <h2 align="center">INSTALLATION</h2>  
   <br>
