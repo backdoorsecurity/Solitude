@@ -11,10 +11,10 @@ iso but rather a collection of scripts to be run on a fresh install of debian/de
 For this configuration to work, your hardware must support pci passthrough.  
 Featuring Sway wm and KVM/QEMU virtualization, a minimal lightweight browser and network vm.
 
-this replaces the Qubes Xen Model with a much lighter stack. this security model is known as
+This security model is known as "isolation through compartmentalization", 
 
-"isolation through compartmentalization", the most advanced computer security system on the planet.
-<h3 align="center">  
+the most advanced computer security system on the planet.
+
 Anyway, computers are kinda my jam, this system is still rough around the edges, but...
 
 I really enjoy using it and it is only going to get better.
