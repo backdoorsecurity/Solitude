@@ -21,8 +21,9 @@ but... I really enjoy using it and it is only going to get better.
   
 <h3 align="center">
 Ideally all communication should be done through ssh. Be sure to set up ssh host keys and disable password auth.  
-Ssh connections should only be allowed from  
-  host > vm and/or vm <> vm if needed, never vm > host.  
+Ssh connections should only be allowed from
+
+host > vm and/or vm <> vm if needed, never vm > host.  
 </h3>  
   
   
