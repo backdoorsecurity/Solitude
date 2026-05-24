@@ -2,7 +2,7 @@
   <---------- SOLITUDE ---------->
 </h1>
 <h2 align="center">
-The operating system for hermits who never get laid.  
+The operating system for lonely nerds who never get laid.  
 </h2>  
 <h3 align="center">  
 Hello and welcome fellow linux users, I bring to you, an operating system configuration, designed for linux power  
