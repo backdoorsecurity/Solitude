@@ -57,7 +57,7 @@ For this reason I would highly advise preparing a live rescue drive pre install.
   
 Upon initial install of the host operating system, reboot into system. As root:
 ``` text
-apt install sudo -y && usermod -aG sudo $USER
+apt install sudo -y && usermod -aG sudo < your normal users username >
 ```
 then logout/in or reboot and run the install script. "This is neccessary for the script to work, i am working on an updated script which does not require sudo.  
   
