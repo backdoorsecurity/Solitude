@@ -7,9 +7,13 @@ set $mod Mod1
 
 # Your preferred terminal emulator
 set $term foot
-# Your preferred application launcher
-#set $menu wmenu-run
-set $menu wofi --show drun
+
+# Named workspaces (prefix with numbers for predictable ordering on swaybar)
+set $ws1 "BRAVE"
+set $ws2 "TERMINAL1"
+set $ws3 "TERMINAL2"
+set $ws4 "TERMINAL3"
+set $ws5 "VIRT-MANAGER"
 
 #fix virt-manager mouse flaw
 #exec_always export WLR_NO_HARDWARE_CURSORS=1
@@ -19,11 +23,25 @@ set $menu wofi --show drun
 
 ######################################## [KEYBINDINGS] ########################################
 	
-	bindsym $mod+a workspace [1]
-	bindsym $mod+s workspace [2]
-	bindsym $mod+d workspace [3]
-	bindsym $mod+f workspace [4]
-	bindsym $mod+g workspace [5]
+#	bindsym $mod+a workspace [1]
+#	bindsym $mod+s workspace [2]
+#	bindsym $mod+d workspace [3]
+#	bindsym $mod+f workspace [4]
+#	bindsym $mod+g workspace [5]
+
+#	Workspace switching (named + static)
+	bindsym $mod+a workspace $ws1
+	bindsym $mod+s workspace $ws2
+	bindsym $mod+d workspace $ws3
+	bindsym $mod+f workspace $ws4
+	bindsym $mod+g workspace $ws5
+
+#	Move focused container to workspace (add these for completeness)
+	bindsym $mod+Shift+a move container to workspace $ws1
+	bindsym $mod+Shift+s move container to workspace $ws2
+	bindsym $mod+Shift+d move container to workspace $ws3
+	bindsym $mod+Shift+f move container to workspace $ws4
+	bindsym $mod+Shift+g move container to workspace $ws5
 	
 	bindsym $mod+j focus left
 	bindsym $mod+Down focus down
@@ -33,7 +51,7 @@ set $menu wofi --show drun
 	bindsym $mod+Shift+r reload
 	
 	bindsym $mod+x kill
-        bindsym $mod+q exec --no-startup-id $HOME/.config/sway/keybindings/browser.kb
+        bindsym $mod+q exec --no-startup-id $HOME/.config/sway/keybindings/brave.kb
         bindsym $mod+w exec --no-startup-id foot
         bindsym $mod+e exec --no-startup-id foot                             
         bindsym $mod+r exec --no-startup-id foot
@@ -74,8 +92,10 @@ set $menu wofi --show drun
 ######################################## [INPUTS/OUTPUTS] ##################################################
 
 #	[DISPLAY]
-
-	output eDP-1 resolution 2560x1600@60Hz scale 1.6
+	output {
+eDP-1 resolution 2560x1600@60Hz scale 1.8 \
+bg "$HOME/.config/sway/wallpapers/solitude_16:10.jpg" fill
+}
 #        output * resolution 2560x1600@60Hz scale 1.6
 
 #	[TOUCHPAD]
@@ -149,7 +169,7 @@ default_border pixel 0
 seat * xcursor_theme oxy-red-argentina 50
 #exec_always brightnessctl set 70%
 #exec_always pgrep -x wlsunset || wlsunset -t 3200
-font monospace 16
+font monospace 14
 #set $WLR_RENDERER gles2
 include /etc/sway/config-vars.d/*
 include /etc/sway/config.d/*

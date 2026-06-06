@@ -43,14 +43,14 @@ iptables -F
 iptables -X
 
 ############################### INPUT ###################################
-iptables -A INPUT -p tcp -i eth0 -s 10.10.10.0/24 -d 10.10.10.0/24 -j ACCEPT
-iptables -A INPUT -p udp -i eth0 -s 10.10.10.0/24 -d 10.10.10.0/24 -j ACCEPT
-iptables -A INPUT -p icmp -i eth0 -s 10.10.10.0/24 -d 10.10.10.0/24 -j ACCEPT
+iptables -A INPUT -p tcp -i eth0 -s 10.10.10.0 -d 10.10.10.1 -j ACCEPT
+iptables -A INPUT -p udp -i eth0 -s 10.10.10.0 -d 10.10.10.1 -j ACCEPT
+iptables -A INPUT -p icmp -i eth0 -s 10.10.10.0 -d 10.10.10.1 -j ACCEPT
 
 ############################### OUTPUT ##################################
-iptables -A OUTPUT -p tcp -o eth0 -s 10.10.10.0/24 -d 10.10.10.0/24 -j ACCEPT
-iptables -A OUTPUT -p udp -o eth0 -s 10.10.10.0/24 -d 10.10.10.0/24 -j ACCEPT
-iptables -A OUTPUT -p icmp -o eth0 -s 10.10.10.0/24 -d 10.10.10.0/24 -j ACCEPT
+iptables -A OUTPUT -p tcp -o eth0 -s 10.10.10.1 -d 10.10.10.0 -j ACCEPT
+iptables -A OUTPUT -p udp -o eth0 -s 10.10.10.1 -d 10.10.10.0 -j ACCEPT
+iptables -A OUTPUT -p icmp -o eth0 -s 10.10.10.1 -d 10.10.10.0 -j ACCEPT
 
 ############################# LOOPBACK ##################################
 iptables -A INPUT -i lo -j ACCEPT
@@ -74,15 +74,15 @@ iptables -X
 #############################################################################
 
 ##################################### INPUT #################################
-iptables -A INPUT -p tcp -i eth0 -s 10.10.10.0 -d 10.10.10.0/28 -j ACCEPT
-iptables -A INPUT -p udp -i eth0 -s 10.10.10.0 -d 10.10.10.0/28 -j ACCEPT
-iptables -A INPUT -p icmp -i eth0 -s 10.10.10.0 -d 10.10.10.0/28 -j ACCEPT
+iptables -A INPUT -p tcp -i eth0 -s 10.10.10.0 -d 10.10.10.2 -j ACCEPT
+iptables -A INPUT -p udp -i eth0 -s 10.10.10.0 -d 10.10.10.2 -j ACCEPT
+iptables -A INPUT -p icmp -i eth0 -s 10.10.10.0 -d 10.10.10.2 -j ACCEPT
 #############################################################################
 
 #################################### OUTPUT #################################
-iptables -A OUTPUT -p tcp -o eth0 -s 10.10.10.0/28 -d 10.10.10.0 -j ACCEPT
-iptables -A OUTPUT -p udp -o eth0 -s 10.10.10.0/28 -d 10.10.10.0 -j ACCEPT
-iptables -A OUTPUT -p icmp -o eth0 -s 10.10.10.0/28 -d 10.10.10.0 -j ACCEPT
+iptables -A OUTPUT -p tcp -o eth0 -s 10.10.10.2 -d 10.10.10.0 -j ACCEPT
+iptables -A OUTPUT -p udp -o eth0 -s 10.10.10.2 -d 10.10.10.0 -j ACCEPT
+iptables -A OUTPUT -p icmp -o eth0 -s 10.10.10.2 -d 10.10.10.0 -j ACCEPT
 #############################################################################
 
 ################################## LOOPBACK #################################

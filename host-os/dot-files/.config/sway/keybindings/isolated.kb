@@ -49,16 +49,10 @@ iptables -X
 #################################### INPUT #################################
 iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 iptables -A INPUT -i eth0 -p tcp --dport 22 -s 10.10.10.0 -j ACCEPT
-iptables -A INPUT -i wlan0 -p tcp --dport 22 -s 192.168.0.0/24 -j ACCEPT
-iptables -A INPUT -i eth1 -p tcp --dport 22 -s 192.168.0.0/24 -j ACCEPT
-iptables -A INPUT -i tun0 -p tcp --dport 22 -s 192.168.0.0/24 -j ACCEPT
 ############################################################################
 
 ################################### OUTPUT #################################
 iptables -A OUTPUT -o eth0 -p tcp --sport 22 -s 10.10.10.0 -j ACCEPT
-iptables -A OUTPUT -o wlan0 -p tcp --sport 22 -s 192.168.0.0/24 -j ACCEPT
-iptables -A OUTPUT -o eth1 -p tcp --sport 22 -s 192.168.0.0/24 -j ACCEPT
-iptables -A OUTPUT -o tun0 -p tcp --sport 22 -s 192.168.0.0/24 -j ACCEPT
 ############################################################################
 
 ############################### FORWARD RULES ##############################

@@ -17,8 +17,8 @@ CPUFRQ=$(cat /sys/bus/cpu/devices/cpu*/cpufreq/scaling_cur_freq 2>/dev/null \
 GPUFRQ=$(awk '{printf "%.1f", $1 / 100}' /sys/class/drm/card0/gt_cur_freq_mhz)
 
 
-printf `"[""td":`%s`"][""gpufreq":`%s`"][""cputemp":`%s`"][""cpufrq":`%s`"][""bat":`%s`"][""wat":%s"]"` \
-"[""$TIME""] [GPU:""$GPUFRQ"GHZ]"[CPU:""$CPUFRQ"GHZ"@""$CPUTEMP"*c"][""$BATTERY"%"|""$WATTAGE"W"]" 2>/dev/null
+printf `"[""td":`%s`"] "       " [""gpufreq":`%s`"][""cputemp":`%s`"][""cpufrq":`%s`"][""bat":`%s`"][""wat":%s"]"` \
+"[""$TIME""] ""           "" [GPU:""$GPUFRQ"GHZ]"[CPU:""$CPUFRQ"GHZ"@""$CPUTEMP"*c"][""$BATTERY"%"|""$WATTAGE"W"]" 2>/dev/null
 
 
 do sleep 2;
