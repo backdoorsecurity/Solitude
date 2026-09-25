@@ -1,0 +1,10 @@
+#blacklist /usr/bin
+blacklist /usr/games
+blacklist /usr/include
+#blacklist /usr/lib
+#blacklist /usr/lib64
+blacklist /usr/libexec
+blacklist /usr/local
+blacklist /usr/sbin
+#blacklist /usr/share
+blacklist /usr/src

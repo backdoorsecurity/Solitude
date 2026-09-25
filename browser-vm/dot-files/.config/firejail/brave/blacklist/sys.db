@@ -1,0 +1,11 @@
+blacklist /sys/block
+blacklist /sys/bus
+blacklist /sys/class
+#blacklist /sys/dev
+#blacklist /sys/devices
+blacklist /sys/firmware
+blacklist /sys/fs
+blacklist /sys/hypervisor
+blacklist /sys/kernel
+blacklist /sys/module
+blacklist /sys/power
