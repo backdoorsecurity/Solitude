@@ -6,20 +6,14 @@ The operating system for lonely nerds who never get laid.
 </h2>  
 <h3 align="center">  
 Hello and welcome fellow linux users, I bring to you, an operating system configuration, designed for linux power  
-users who seek the isolated security model of QubesOs but prefer a light snappy cli focused ui. This is not a plug and play  
+users who seek the isolated security model of QubesOs but prefer a lighter snappy, cli focused ui. This is not a plug and play  
 iso but rather a collection of scripts to be run on a fresh install of debian/derivative host/vm's.  
-For this configuration to work, your hardware must support pci passthrough.  
+For this configuration to work, your hardware must support intel vfio pci passthrough.  
 Featuring Sway wm and KVM/QEMU virtualization, a minimal lightweight browser and network vm.  
-  
-This security model is known as "isolation through compartmentalization",   
-the most advanced computer security system on the planet.  
-Anyway, computers are kinda my jam, this system is still rough around the edges,  
-  but... I really enjoy using it and it is only going to get better.
 </h3>  
   
   
-<h2 align="center">!!! UNTIL THIS DISCLAIMER IS REMOVED,  
-  THESE SCRIPTS WILL LIKELY PRODUCE ERRORS !!!
+<h2 align="center">!!! I abandoned this project early on in favor of other projects, Do not try to install this unless you know what you are doing !!!
 </h2>
 <h3 align"=center">
 It would be wise to carefully read the scripts and check the config files before you install this on bare metal.
@@ -42,6 +36,7 @@ As debian does not ship with sway wm, the preferred method is to skip installing
 
 One catch is the command sudo and rfkill will not be installed. If you cannot connect to wifi network after install, execute:
 ```text
+modprobe rfkill
 rfkill list
 ```
 if it returns "rfkill not installed" you will need to either connect to ethernet and 
@@ -158,7 +153,7 @@ into url bar and exploring your filesystem as the browser can.
   
   
   
-Setting up the browser is pretty dang basic, just add existing browser.qcow2 in virt-manager gui, check box for `customize configuration before install`, then `add hardware`, at the very bottom add `virtio vsock`. This forwards the browser window through to the host os.
+Setting up the browser is pretty dang basic, just add existing browser.qcow2 in virt-manager gui, check box for `customize configuration before install`, then `add hardware`, at the very bottom add `virtio vsock`. This allows window forwarding from the browser vm through to the host os.
 The command to start the web browser is sent via ssh to the browser vm, it is neccessary to set ssh hostkeys.
   
   
